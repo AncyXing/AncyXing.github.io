@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ancy">
+    
+    <title>
+        
+        Ancy Note
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/brands.min.css">
+    
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","favicon":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","avatar":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"everything is possible.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"giscus","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":"AncyXing/AncyXing.github.io","repo_id":"MDEwOlJlcG9zaXRvcnkxOTQzOTY0OTM=","category":"Announcements","category_id":"DIC_kwDOC5ZBTc4CYYD-","reactions_enabled":false}},"post":{"author_avatar":true,"author_label":{"enable":true,"auto":true,"custom_label_list":["Java工程师"]},"word_count":{"wordcount":true,"min2read":true},"datetime":{"create":true,"update":true,"format":"YYYY-MM-DD HH:mm:ss"},"img_align":"left","copyright_info":true},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"version":"3.7.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box is-home">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp">
+                </a>
+            
+            <a class="site-name" href="/">
+               Ancy Note
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list border-box">
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%89%8D%E7%AB%AF/es6/export%EF%BC%8Cimport%20%EF%BC%8Cexport%20default%E6%98%AF%E4%BB%80%E4%B9%88/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            export和import先简单的介绍一下export和importexport命令定义了模块的对外接口以后，其他JS文件就可以通过import命令加载这个模块（文件），一个文件可以理解为一个模块。通俗的说一个导出一个导入。
+export与expor...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:53:38 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%89%8D%E7%AB%AF/es6/export%EF%BC%8Cimport%20%EF%BC%8Cexport%20default%E6%98%AF%E4%BB%80%E4%B9%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%89%8D%E7%AB%AF/axios/%E4%BB%80%E4%B9%88%E6%98%AFaxios/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            简单介绍易用、简洁且高效的http库
+案例执行GET请求12345678// 为给定 ID 的 user 创建请求axios.get(&#x27;/user?ID=12345&#x27;)  .then(function (response) &#1...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:53:38 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%89%8D%E7%AB%AF/axios/%E4%BB%80%E4%B9%88%E6%98%AFaxios/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%89%8D%E7%AB%AF/axios/axios%20api/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            axios(config)可以通过向 axios 传递相关配置来创建请求
+123456789101112131415161718// 发送 POST 请求axios(&#123;  method: &#x27;post&#x27;,  url: &#...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:53:28 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%89%8D%E7%AB%AF/axios/axios%20api/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%89%8D%E7%AB%AF/%E5%8E%BB%E9%99%A4%E6%BB%9A%E5%8A%A8%E6%9D%A1/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            12345678910111213141516.file-popup-mask &#123;    position: absolute;    top: 0;    bottom: 0;    left: 0;    right: 0;    ba...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:52:24 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%89%8D%E7%AB%AF/%E5%8E%BB%E9%99%A4%E6%BB%9A%E5%8A%A8%E6%9D%A1/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%89%8D%E7%AB%AF/linux%E6%9B%B4%E6%96%B0node%20%E7%89%88%E6%9C%AC/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            
+清除缓存信息1npm cache clean -f
+下载node安装包
+
+1npm install -g n
+
+升级到nodejs最新稳定版本
+
+1n stable
+
+查看当前版本
+
+1node -v
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:52:18 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%89%8D%E7%AB%AF/linux%E6%9B%B4%E6%96%B0node%20%E7%89%88%E6%9C%AC/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%85%B6%E4%BB%96/%E8%AE%A1%E5%88%92/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            1.软件测试理论基础：
+需求分析（如何分析，用户的角度，功能性非功能性，显性需求，隐形需求）
+测试用例编写（设计方法，用例如何编写，边界值，因果值）
+测试报告（提bug）
+
+2.接口测试：
+http协议接口测试
+常用接口测试工具postman,jme...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:52:09 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%85%B6%E4%BB%96/%E8%AE%A1%E5%88%92/%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%85%B6%E4%BB%96/%E7%9B%AE%E6%A0%87/%E4%B8%AA%E4%BA%BA%E5%9B%9E%E9%A1%BE%E3%80%81%E5%B1%95%E6%9C%9B%E5%8F%8A%E5%A5%96%E9%A1%B9%E7%94%B3%E8%AF%B7%E6%9C%9B/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            过去一年的贡献参与通信云平台、5G消息CSP平台开发，紧跟项目计划共完成46项任务，解决了42个BUG。
+新的一年在哪些方面提高
+项目技术方面：努力为5G消息CSP平台建设提供技术支持和保障，打造出一个高性能、用户使用体验良好的优质产品。
+个人成长方...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:52:27 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%85%B6%E4%BB%96/%E7%9B%AE%E6%A0%87/%E4%B8%AA%E4%BA%BA%E5%9B%9E%E9%A1%BE%E3%80%81%E5%B1%95%E6%9C%9B%E5%8F%8A%E5%A5%96%E9%A1%B9%E7%94%B3%E8%AF%B7%E6%9C%9B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%85%B6%E4%BB%96/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/target/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            没有目标就没有进步目标就像方向，失去了方向，就迷了路
+路漫漫其修远兮阶段性前进，罗马非一日建成
+心如磐石路很长，但可以慢慢走，贵在坚持
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:53:41 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%85%B6%E4%BB%96/%E4%B8%AA%E4%BA%BA%E6%84%9F%E6%83%B3/target/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%90%8E%E7%AB%AF%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/Themleaf/thealeaf%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            迭代列表使用th:each对列表进行迭代
+123&lt;tr th:each=&quot;product : $&#123;productList&#125;&quot;&gt;	&lt;td th:text=&quot;$&#123;product...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:53:42 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%90%8E%E7%AB%AF%E6%A8%A1%E6%9D%BF%E5%BC%95%E6%93%8E/Themleaf/thealeaf%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/">
+                            
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            多次点击保存按钮，应保存一次；接口幂等性根据业务而定。
+核心思想：通过唯一的业务单号保证幂等版本号作为更新条件
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Jan 28 2023 20:52:12 GMT+0800">2023-01-28</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/%E6%8E%A5%E5%8F%A3%E5%B9%82%E7%AD%89%E6%80%A7/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator border-box">
+    <a class="btn jump-btn show"
+       href="/page/13/"
+    >上一页</a>
+
+    
+        <div class="page-number-box border-box flex-center">
+            <input class="page-number-input border-box base-color-size"
+                   type="number"
+                   value="14"
+                   min="1"
+                   max="21"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+        </div>
+    
+
+
+    <a class="btn jump-btn show"
+       href="/page/15/"
+    >下一页</a>
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ancy</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.7.0</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                        本站由 <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+    
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>

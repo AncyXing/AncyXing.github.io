@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ancy">
+    
+    <title>
+        
+        Ancy Note
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/fontawesome.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/regular.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/solid.min.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/font/css/brands.min.css">
+    
+    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","favicon":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","avatar":"https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"everything is possible.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"side_tools":{},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"giscus","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":"AncyXing/AncyXing.github.io","repo_id":"MDEwOlJlcG9zaXRvcnkxOTQzOTY0OTM=","category":"Announcements","category_id":"DIC_kwDOC5ZBTc4CYYD-","reactions_enabled":false}},"post":{"author_avatar":true,"author_label":{"enable":true,"auto":true,"custom_label_list":["Java工程师"]},"word_count":{"wordcount":true,"min2read":true},"datetime":{"create":true,"update":true,"format":"YYYY-MM-DD HH:mm:ss"},"img_align":"left","copyright_info":true},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"version":"3.7.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box is-home">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                <a class="logo-image" href="/">
+                    <img src="https://cdn.staticaly.com/gh/AncyXing/picx-images-hosting@master/avator.5somfq5plbo0.webp">
+                </a>
+            
+            <a class="site-name" href="/">
+               Ancy Note
+            </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active"
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active"
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list border-box">
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%882%EF%BC%89/">
+                            Git工作区、暂存区和版本库（2）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            四个工作区域Git本地有四个工作区域：
+
+工作目录（Working Directory）
+暂存区(Stage&#x2F;Index)
+资源库(Repository或Git Directory)
+git仓库(Remote Directory)
+
+文件在...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 19:20:53 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%882%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                            git常用命令
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            新建代码库123456# 在当前目录新建一个Git代码库git init# 新建一个目录，将其初始化为Git代码库git init [project-name]# 下载一个项目和它的整个代码历史git clone [url]
+查看文件状态1234# ...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 19:20:47 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/git/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">
+                            版本号的分配规则
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            版本号的分配规则版本号的分配规则
+版本控制策略规定了软件版本号的分配规则，因此指定该策略时应当尽量简单易懂。比如在用x.y.z格式进行版本管理时的规则如下所示：
+
+x在重大功能变更或新版本不向下兼容时加1，此时y与z的数字归0
+y在添加新功能或者删除...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 19:20:58 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/git/%E6%92%A4%E5%9B%9E%E4%B8%8D%E6%83%B3push%E7%9A%84commit/">
+                            撤回不想push的commit
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            
+使用git log查看提交历史
+获取到commitId
+使用命令如下命令
+
+1git reset --hard commitId
+
+之后git log中不再有上次不想提交的commit记录
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 19:21:01 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/git/%E6%92%A4%E5%9B%9E%E4%B8%8D%E6%83%B3push%E7%9A%84commit/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/git/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">
+                            注意事项
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            
+多人共同开发同一个任务需求时，由其中一人打好功能分支上传至远程仓库供他人下载，所有开发这个需求的开发人员都使用这个功能分支进行开发，功能开发完成 代码上传完成后 再由其中一人提交合并请求即可。
+假设现在没有打realse分支，然后功能分支上开发的代...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 19:21:07 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/git/%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">
+                            ElasticSearch中的倒排索引到底是什么
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            倒排索引是 es 中非常重要的索引结构，是从文档词项到文档 ID 的一个映射过程。
+“正排索引”我们在关系型数据库中见到的索引，就是“正排索引”。关系型数据库中的索引如下，假设我有一个博客表：我们可以针对这个表建立索引（正排索引）：
+当我们通过 id...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:38 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">
+                            ElasticSearch动态映射与静态映射
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            映射就是 Mapping，它用来定义一个文档以及文档所包含的字段该如何被存储和索引。所以，它其实有点类似于关系型数据库中表的定义。
+映射分类动态映射顾名思义，就是自动创建出来的映射。es 根据存入的文档，自动分析出来文档中字段的类型以及存储方式，这种...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:12 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8/">
+                            ElasticSearch中的中文分词器
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            内置分词器ElasticSearch 核心功能就是数据检索，首先通过索引将文档写入 es。查询分析则主要分为两个步骤：
+
+词条化：分词器将输入的文本转为一个一个的词条流。
+过滤：比如停用词过滤器会从词条中去除不相干的词条（的，嗯，啊，呢）；另外还有同...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:41 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                            ElasticSearch十大核心概念
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            集群（Cluster）一个或者多个安装了 es 节点的服务器组织在一起，就是集群，这些节点共同持有数据，共同提供搜索服务。
+一个集群有一个名字，这个名字是集群的唯一标识，该名字成为 cluster name，默认的集群名称是 elasticsearc...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:19 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">
+                            ElasticSearch四种字段类型详解
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            核心类型字符串类型
+string：这是一个已经过期的字符串类型。在 es5 之前，用这个来描述字符串，现在的话，它已经被 text 和 keyword 替代了。
+text：如果一个字段是要被全文检索的，比如说博客内容、新闻内容、产品描述，那么可以使用...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:22 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator border-box">
+    <a class="btn jump-btn show"
+       href="/page/3/"
+    >上一页</a>
+
+    
+        <div class="page-number-box border-box flex-center">
+            <input class="page-number-input border-box base-color-size"
+                   type="number"
+                   value="4"
+                   min="1"
+                   max="21"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+        </div>
+    
+
+
+    <a class="btn jump-btn show"
+       href="/page/5/"
+    >下一页</a>
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;2023
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ancy</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;|&nbsp;主题&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.7.0</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                        本站由 <span class="tooltip" data-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+<script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/utils.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/main.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/header-shrink.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/back2top.js"></script><script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/dark-light-toggle.js"></script>
+
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/local-search.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/code-block.js"></script>
+
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/lazyload.js"></script>
+
+
+<div class="post-scripts pjax">
+    
+    
+    
+</div>
+
+
+    <script src="//cdn.jsdelivr.net/npm/hexo-theme-keep@3.7.0/source/js/libs/pjax.min.js"></script>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
