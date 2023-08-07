@@ -171,15 +171,14 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">
-                            模糊查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-search_analyzer/">
+                            映射参数-search_analyzer
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在实际搜索中，有时我们可能会打错字，从而导致搜索不到，在 match query 中，可以通过 fuzziness 属性实现模糊查询。
-fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？以LevenShtein 编辑距离为准。编辑距...
+                            search_analyzer查询时候的分词器。默认情况下，如果没有配置 search_analyzer，则查询时，首先查看有没有 search_analyzer，有的话，就用 search_analyzer 来进行分词，如果没有，则看有没有 ana...
                         
                     </div>
 
@@ -187,7 +186,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:10:08 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:13 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -215,7 +214,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-search_analyzer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -230,14 +229,15 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A0%B9%E6%8D%AEid%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0/">
-                            根据id对数据进行更新
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-store/">
+                            映射参数-store
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            123456POST test/_doc/1/_update&#123;    &quot;doc&quot; : &#123;        &quot;name&quot; : &quot;new_name&quot;    &#125;&#12...
+                            默认情况下，字段会被索引，也可以搜索，但是不会存储，虽然不会被存储的，但是 _source 中有一个字段的备份。如果想将字段存储下来，可以通过配置 store 来实现。
+
                         
                     </div>
 
@@ -245,7 +245,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:55 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:19 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -273,7 +273,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A0%B9%E6%8D%AEid%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-store/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -288,21 +288,17 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">
-                            范围查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">
+                            更新索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            范围查询可以按照日期范围、数字范围等查询。range query 中的参数主要有四个：
-
-gt
-lt
-gte
-lte案例：
-
-123456789101112131415161718GET books/_search&#123;  &quot;quer...
+                            索引创建好之后，可以修改其属性。
+修改索引的副本数例如修改索引的副本数：
+1234PUT book/_settings&#123;  &quot;number_of_replicas&quot;: 2&#125;
+修改索引的读写权限索引创建成功后，可...
                         
                     </div>
 
@@ -310,7 +306,7 @@ lte案例：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:17 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:57 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -338,7 +334,7 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -353,16 +349,23 @@ lte案例：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">
-                            词项查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">
+                            映射参数-term_vectors
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            词项查询即 term 查询，就是根据词去查询，查询指定字段中包含给定单词的文档，term 查询不被解析，只有搜索的词和文档中的词精确匹配，才会返回文档。应用场景如：人名、地名等等。
-查询 name 字段中包含 十一五 的文档。
-12345678GET...
+                            term_vectors 是通过分词器产生的信息，包括：
+
+一组 terms
+每个 term 的位置
+term 的首字符&#x2F;尾字符与原始字符串原点的偏移量
+
+term_vectors 取值：
+
+    
+
                         
                     </div>
 
@@ -370,7 +373,7 @@ lte案例：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:00 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:23 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -398,7 +401,7 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -413,15 +416,19 @@ lte案例：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">
-                            通过id进行查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E7%9A%84%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD/">
+                            索引的打开和关闭
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            根据指定的 id 查询。
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;ids&quot;:&#123;      &quot;values&quot;:  [...
+                            关闭索引：
+1POST book/_close
+打开索引：
+1POST book/_open
+当然，可以同时关闭&#x2F;打开多个索引，多个索引用 , 隔开，或者直接使用 _all 代表所有索引。
+
                         
                     </div>
 
@@ -429,7 +436,7 @@ lte案例：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:11:15 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:13 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -457,7 +464,7 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E7%9A%84%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -472,20 +479,15 @@ lte案例：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">
-                            通配符查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">
+                            索引别名
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            wildcard query 即通配符查询。支持单字符和多字符通配符：
-
-？表示一个任意字符。
-*表示零个或者多个字符。
-
-查询所有姓张的作者的书：
-12345678910GET books/_search&#123;  &quot;query&qu...
+                            添加别名可以为索引创建别名，如果这个别名是唯一的，该别名可以代替索引名称。
+1234567891011POST /_aliases&#123;  &quot;actions&quot;: [    &#123;      &quot;add&quot...
                         
                     </div>
 
@@ -493,7 +495,7 @@ lte案例：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:11:32 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:10 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -521,125 +523,7 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
-                            非空查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            exists query 会返回指定字段中至少有一个非空值的文档：
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:32 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">
-                            指标聚合
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            Max Aggregation统计最大值。例如查询价格最高的书：
-12345678910GET books/_search&#123;  &quot;aggs&quot;: &#123;    &quot;max_price&quot;: &#123...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:58 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -699,6 +583,128 @@ lte案例：
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">
+                            查看索引
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            查看索引head 插件查看方式如下： 
+请求查看方式如下：1GET book/_settings
+结果如下：也可以同时查看多个索引信息：
+1GET test,test2/_settings
+结果如下：也可以查看所有索引信息：
+1GET _all/_s...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:48 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">
+                            指标聚合
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            Max Aggregation统计最大值。例如查询价格最高的书：
+12345678910GET books/_search&#123;  &quot;aggs&quot;: &#123;    &quot;max_price&quot;: &#123...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:58 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -779,8 +785,8 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
                    type="number"
                    value="10"
                    min="1"
-                   max="21"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+                   max="11"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">11</span>
         </div>
     
 

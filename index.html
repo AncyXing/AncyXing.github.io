@@ -196,16 +196,18 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/ConcurrentHashMapget%E6%96%B9%E6%B3%95%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/">
-                            ConcurrentHashMapget方法空指针异常
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Optional%E7%9A%84%E4%BD%BF%E7%94%A8/">
+                            Optional的使用
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            
-原因：ConcurrentHashMap不允许null key和null value。
-补充：hashMap和linkedhashMap都允许null key和null value，treeMap不允许null key，但允许null value，...
+                            使用目的减少if空判断
+使用方式1Optional.ofNullable(变量).ifPresent(lambda表达式)
+思考一条语句完成，感觉也可以使用三元运算符。虽然if大多数时候可以被替换掉，但是一下情况还是使用if比较方便
+
+在函数retu...
                         
                     </div>
 
@@ -213,7 +215,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:21:41 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:03 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -241,7 +243,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/ConcurrentHashMapget%E6%96%B9%E6%B3%95%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Optional%E7%9A%84%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -318,18 +320,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Optional%E7%9A%84%E4%BD%BF%E7%94%A8/">
-                            Optional的使用
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/ConcurrentHashMapget%E6%96%B9%E6%B3%95%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/">
+                            ConcurrentHashMapget方法空指针异常
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            使用目的减少if空判断
-使用方式1Optional.ofNullable(变量).ifPresent(lambda表达式)
-思考一条语句完成，感觉也可以使用三元运算符。虽然if大多数时候可以被替换掉，但是一下情况还是使用if比较方便
-
-在函数retu...
+                            
+原因：ConcurrentHashMap不允许null key和null value。
+补充：hashMap和linkedhashMap都允许null key和null value，treeMap不允许null key，但允许null value，...
                         
                     </div>
 
@@ -337,7 +337,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:03 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:21:41 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -365,7 +365,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Optional%E7%9A%84%E4%BD%BF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/ConcurrentHashMapget%E6%96%B9%E6%B3%95%E7%A9%BA%E6%8C%87%E9%92%88%E5%BC%82%E5%B8%B8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -486,64 +486,6 @@
 
     
         <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/int%E4%B8%8Enull%E6%AF%94%E8%BE%83/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%8F%8A%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">
-                            java获取当年第一天及最后一天
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            123456789101112131415161718192021222324/** * 取得当年第一天凌晨0:00时间 * * @return */public static Date getThisYearFirst() &#123;	Calen...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:21:56 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%8F%8A%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -788,6 +730,68 @@ BufferedR...
                 </div>
             </li>
         
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%AF%B9%E9%9B%86%E5%90%88%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/">
+                            对集合进行排序
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            jdk默认的排序默认为升序
+Comparablea1,a2两数比较，若a1 &lt; a2则返回-1；若a1 &#x3D; a2，则返回0；若a1 &gt; a2，则返回1
+升序排列
+a1 &lt; a2，return -1
+a1 &#x3D; a2...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:14 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%AF%B9%E9%9B%86%E5%90%88%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
     </ul>
 
     <div class="home-paginator">
@@ -802,8 +806,8 @@ BufferedR...
                    type="number"
                    value="1"
                    min="1"
-                   max="21"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+                   max="11"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">11</span>
         </div>
     
 

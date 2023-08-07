@@ -171,14 +171,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-position_increment_gap/">
-                            映射参数-position_increment_gap
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">
+                            复合类型
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            被解析的 text 字段会将 term 的位置考虑进去，目的是为了支持近似查询和短语查询，当我们去索引一个含有多个值的 text 字段时，会在各个值之间添加一个假想的空间，将值隔开，这样就可以有效避免一些无意义的短语匹配，间隙大小通过 positio...
+                            数组类型es 中没有专门的数组类型。默认情况下，任何字段都可以有一个或者多个值。需要注意的是，数组中的元素必须是同一种类型。
+添加数组是，数组中的第一个元素决定了整个数组的类型。
+对象类型（object）由于 JSON 本身具有层级关系，所以文档包含...
                         
                     </div>
 
@@ -186,7 +188,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:09 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:51 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -214,7 +216,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-position_increment_gap/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -229,14 +231,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-search_analyzer/">
-                            映射参数-search_analyzer
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%A1%A3%E6%9B%B4%E6%96%B0/">
+                            文档更新
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            search_analyzer查询时候的分词器。默认情况下，如果没有配置 search_analyzer，则查询时，首先查看有没有 search_analyzer，有的话，就用 search_analyzer 来进行分词，如果没有，则看有没有 ana...
+                            普通更新注意，文档更新一次，version 就会自增 1。
+可以直接更新整个文档：
+1234PUT blog/_doc/RuWrl3UByGJWB5WucKtP&#123;  &quot;title&quot;:&quot;666&quot;&#12...
                         
                     </div>
 
@@ -244,7 +248,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:13 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:17 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -272,7 +276,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-search_analyzer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%A1%A3%E6%9B%B4%E6%96%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -287,15 +291,19 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-similarity/">
-                            映射参数-similarity
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">
+                            映射参数-analyzer
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            similarity 指定文档的评分模型，默认有三种：
+                            analyzer定义文本字段的分词器。默认对索引和查询都是有效的。
 
+什么叫对索引和查询都是有效的？
+
+假设不用分词器，我们先来看一下索引的结果，创建一个索引并添加一个文档：
+123456PUT blogPUT blog/_doc/1&#123;  ...
                         
                     </div>
 
@@ -303,7 +311,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:16 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:21 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -331,7 +339,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-similarity/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -346,19 +354,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">
-                            查看索引
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-boost/">
+                            映射参数-boost
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            查看索引head 插件查看方式如下： 
-请求查看方式如下：1GET book/_settings
-结果如下：也可以同时查看多个索引信息：
-1GET test,test2/_settings
-结果如下：也可以查看所有索引信息：
-1GET _all/_s...
+                            boostboost 参数可以设置字段的权重。
+boost 有两种使用思路，一种就是在定义 mappings 的时候使用，在指定字段类型时使用；另一种就是在查询时使用。
+实际开发中建议使用后者，前者有问题：如果不重新索引文档，权重无法修改。mappi...
                         
                     </div>
 
@@ -366,7 +371,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:48 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:24 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -394,7 +399,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-boost/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -409,15 +414,18 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-store/">
-                            映射参数-store
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">
+                            映射参数-coerce
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            默认情况下，字段会被索引，也可以搜索，但是不会存储，虽然不会被存储的，但是 _source 中有一个字段的备份。如果想将字段存储下来，可以通过配置 store 来实现。
-
+                            coercecoerce 用来清除脏数据，默认为 true。
+例如一个数字，在 JSON 中，用户可能写错了：
+1&#123;&quot;age&quot;:&quot;99&quot;&#125;
+或者 ：
+1&#123;&quot;age&quo...
                         
                     </div>
 
@@ -425,7 +433,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:19 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:27 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -453,7 +461,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-store/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -468,23 +476,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">
-                            映射参数-term_vectors
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-copy_to/">
+                            映射参数-copy_to
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            term_vectors 是通过分词器产生的信息，包括：
-
-一组 terms
-每个 term 的位置
-term 的首字符&#x2F;尾字符与原始字符串原点的偏移量
-
-term_vectors 取值：
-
-    
-
+                            copy_to这个属性，可以将多个字段的值，复制到同一个字段中。
+定义方式如下：
+123456789101112131415161718192021222324252627282930313233PUT blog&#123;  &quot;mappi...
                         
                     </div>
 
@@ -492,7 +493,7 @@ term_vectors 取值：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:23 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:30 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -520,7 +521,7 @@ term_vectors 取值：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-copy_to/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -535,17 +536,15 @@ term_vectors 取值：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">
-                            更新索引
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">
+                            映射参数-enabled
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            索引创建好之后，可以修改其属性。
-修改索引的副本数例如修改索引的副本数：
-1234PUT book/_settings&#123;  &quot;number_of_replicas&quot;: 2&#125;
-修改索引的读写权限索引创建成功后，可...
+                            es 默认会索引所有的字段，但是有的字段可能只需要存储，   不需要索引。此时可以通过 enabled 字段来控制：
+123456789101112131415161718192021222324PUT blog&#123;  &quot;mappi...
                         
                     </div>
 
@@ -553,7 +552,7 @@ term_vectors 取值：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:57 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:37 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -581,7 +580,7 @@ term_vectors 取值：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -596,15 +595,14 @@ term_vectors 取值：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">
-                            索引别名
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-doc_values/">
+                            映射参数-doc_values
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            添加别名可以为索引创建别名，如果这个别名是唯一的，该别名可以代替索引名称。
-1234567891011POST /_aliases&#123;  &quot;actions&quot;: [    &#123;      &quot;add&quot...
+                            doc_valueses 中的搜索主要是用到倒排索引，doc_values 参数是为了加快排序、聚合操作而生的。当建立倒排索引的时候，会额外增加列式存储映射。doc_values 默认是开启的，如果确定某个字段不需要排序或者不需要聚合，那么可以关闭 ...
                         
                     </div>
 
@@ -612,7 +610,7 @@ term_vectors 取值：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:10 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:34 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -640,7 +638,7 @@ term_vectors 取值：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-doc_values/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -655,19 +653,15 @@ term_vectors 取值：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E7%9A%84%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD/">
-                            索引的打开和关闭
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">
+                            映射参数-format
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            关闭索引：
-1POST book/_close
-打开索引：
-1POST book/_open
-当然，可以同时关闭&#x2F;打开多个索引，多个索引用 , 隔开，或者直接使用 _all 代表所有索引。
-
+                            日期格式。format 可以规范日期格式，而且一次可以定义多个 format。
+123456789101112131415161718192021PUT users&#123;  &quot;mappings&quot;: &#123;    &qu...
                         
                     </div>
 
@@ -675,7 +669,7 @@ term_vectors 取值：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:13 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:43 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -703,7 +697,7 @@ term_vectors 取值：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E7%9A%84%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -718,15 +712,15 @@ term_vectors 取值：
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%85%A8%E6%96%87%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch全文查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">
+                            映射参数-fields
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            match querymatch query 会对查询语句进行分词，分词后，如果查询语句中的任何一个词项被匹配，则文档就会被索引到。
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;...
+                            fields 参数可以让同一字段有多种不同的索引方式。例如：
+1234567891011121314151617181920212223242526272829PUT blog&#123;  &quot;mappings&quot;: &#123; ...
                         
                     </div>
 
@@ -734,7 +728,7 @@ term_vectors 取值：
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:50 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:40 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -762,7 +756,7 @@ term_vectors 取值：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%85%A8%E6%96%87%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -783,8 +777,8 @@ term_vectors 取值：
                    type="number"
                    value="8"
                    min="1"
-                   max="21"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+                   max="11"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">11</span>
         </div>
     
 

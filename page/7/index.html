@@ -171,15 +171,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">
-                            映射参数-fields
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%B9%B6%E5%8F%91%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E9%94%81%E5%92%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">
+                            ElasticSearch并发的处理方式锁和版本控制
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            fields 参数可以让同一字段有多种不同的索引方式。例如：
-1234567891011121314151617181920212223242526272829PUT blog&#123;  &quot;mappings&quot;: &#123; ...
+                            当我们使用 es 的 API 去进行文档更新时，它首先读取原文档出来，然后对原文档进行更新，更新完成后再重新索引整个文档。不论你执行多少次更新，最终保存在 es 中的是最后一次更新的文档。但是如果有两个线程同时去更新，就有可能出问题。
+要解决问题，就...
                         
                     </div>
 
@@ -187,7 +187,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:40 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:05 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -215,7 +215,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%B9%B6%E5%8F%91%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E9%94%81%E5%92%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -230,15 +230,14 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">
-                            映射参数-format
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%AE%80%E4%BB%8B/">
+                            ElasticSearch简介
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            日期格式。format 可以规范日期格式，而且一次可以定义多个 format。
-123456789101112131415161718192021PUT users&#123;  &quot;mappings&quot;: &#123;    &qu...
+                            是什么ElasticSearch 是一个分布式、可扩展、近实时性的高性能搜索与数据分析引擎。ElasticSearch 基于 Java 编写，通过进一步封装 Lucene，将搜索的复杂性屏蔽起来，开发者只需要一套简单的 RESTful API 就可以...
                         
                     </div>
 
@@ -246,7 +245,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:43 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:15 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -274,7 +273,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%AE%80%E4%BB%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -289,15 +288,26 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-include_in_all/">
-                            映射参数-include_in_all
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%9A%84%E5%AE%89%E8%A3%85/">
+                            ElasticSearch的安装
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            这个是针对 _all 字段的，但是在 es7 中，该字段已经被废弃了。
+                            单节点安装
+首先打开 Es 官网，找到 Elasticsearch：https://www.elastic.co/cn/elasticsearch/ 下载安装合适版本
+将下载的文件解压，解压后的目录含义如下：
 
+
+
+
+目录
+含义
+
+
+
+modules...
                         
                     </div>
 
@@ -305,7 +315,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:50 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:08 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -333,7 +343,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-include_in_all/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%9A%84%E5%AE%89%E8%A3%85/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -348,15 +358,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">
-                            映射参数-ignore_above
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/kibana%E5%AE%89%E8%A3%85/">
+                            kibana安装
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            igbore_above 用于指定分词和索引的字符串最大长度，超过最大长度的话，该字段将不会被索引，这个字段只适用于 keyword 类型。
-123456789101112131415161718192021222324252627282930PUT...
+                            是什么Kibana 是一个 Elastic 公司推出的一个针对 es 的分析以及数据可视化平台，可以搜索、查看存放在 es 中的数据。
+安装步骤如下
+下载 Kibana：https://www.elastic.co/cn/downloads/kiba...
                         
                     </div>
 
@@ -364,7 +375,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:16:30 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:44 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -392,7 +403,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/kibana%E5%AE%89%E8%A3%85/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -407,15 +418,19 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_malformed/">
-                            映射参数-ignore_malformed
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BB%80%E4%B9%88%E6%98%AFLucene/">
+                            什么是Lucene
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            ignore_malformed 可以忽略不规则的数据，该参数默认为 false。
-12345678910111213141516171819202122232425262728293031323334PUT users&#123;  &quot;m...
+                            Lucene什么是LuceneLucene 是一个开源、免费、高性能、纯 Java 编写的全文检索引擎，可以算作是开源领域最好的全文检索工具包。
+使用场景在实际开发中，Lucene 几乎适用于任何需要全文检索的场景
+特点
+简单
+跨语言
+强大的搜索引擎...
                         
                     </div>
 
@@ -423,7 +438,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:47 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:07 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -451,7 +466,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_malformed/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E4%BB%80%E4%B9%88%E6%98%AFLucene/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -466,15 +481,14 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-normalizer/">
-                            映射参数-normalizer
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                            ElasticSearch索引基本操作
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            **# **normalizernormalizer 参数用于解析前（索引或者查询）的标准化配置。
-比如，在 es 中，对于一些我们不想切分的字符串，我们通常会将其设置为 keyword，搜索时候也是使用整个词进行搜索。如果在索引前没有做好数据清洗，...
+                            新建索引通过 head 插件新建索引在 head 插件中，选择 索引选项卡，然后点击新建索引。新建索引时，需要填入索引名称、分片数以及副本数。创建成功后：0、1、2、3、4 分别表示索引的分片，粗框表示主分片，细框表示副本（点一下框，通过 prima...
                         
                     </div>
 
@@ -482,7 +496,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:59 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:25 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -510,7 +524,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-normalizer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -525,16 +539,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-index_options/">
-                            映射参数-index_options
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E6%96%87%E6%A1%A3%E8%B7%AF%E7%94%B1%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%B0%E5%BA%95%E5%AD%98%E5%9C%A8%E5%93%AA%E4%B8%80%E4%B8%AA%E5%88%86%E7%89%87%E4%B8%8A/">
+                            ElasticSearch文档路由你的数据到底存在哪一个分片上
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            index_options 控制索引时哪些信息被存储到倒排索引中（用在 text 字段中），有四种取值：
-
-
+                            es 是一个分布式系统，当我们存储一个文档到 es 上之后，这个文档实际上是被存储到 master 节点中的某一个主分片上。例如新建一个索引，该索引有两个分片，0个副本，如下:接下来，向该索引中保存一个文档：
+1234PUT blog/_doc/a&...
                         
                     </div>
 
@@ -542,7 +555,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:56 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:35 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -570,7 +583,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-index_options/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E6%96%87%E6%A1%A3%E8%B7%AF%E7%94%B1%E4%BD%A0%E7%9A%84%E6%95%B0%E6%8D%AE%E5%88%B0%E5%BA%95%E5%AD%98%E5%9C%A8%E5%93%AA%E4%B8%80%E4%B8%AA%E5%88%86%E7%89%87%E4%B8%8A/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -585,14 +598,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-norms/">
-                            映射参数-norms
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">
+                            删除索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            norms 对字段评分有用，text 默认开启 norms，如果不是特别需要，不要开启 norms。
+                            head 插件可以删除索引
+请求删除如下1DELETE test
+删除一个不存在的索引会报错。
 
                         
                     </div>
@@ -601,7 +616,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:03 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:04 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -629,7 +644,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-norms/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -644,15 +659,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-index/">
-                            映射参数-index
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%88%B6%E7%B4%A2%E5%BC%95/">
+                            复制索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            index 属性指定一个字段是否被索引，该属性为 true 表示字段被索引，false 表示字段不被索引。
-12345678910111213141516171819202122232425PUT users&#123;  &quot;mapping...
+                            索引复制，只会复制数据，不会复制索引配置。
+12345POST _reindex&#123;  &quot;source&quot;: &#123;&quot;index&quot;:&quot;book&quot;&#125;,  &quot;de...
                         
                     </div>
 
@@ -660,7 +675,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:53 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:54 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -688,7 +703,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-index/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%88%B6%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -703,15 +718,17 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-null_value/">
-                            映射参数-null_value
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">
+                            批量操作
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在 es 中，值为 null 的字段不索引也不可以被搜索，null_value 可以让值为 null 的字段显式的可索引、可搜索：
-1234567891011121314151617181920212223242526PUT users&#123; ...
+                            批量操作
+es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等操作。
+首先需要将所有的批量操作写入一个 JSON 文件中，然后通过 POST 请求将该 JSON 文件上传并执行。
+例如新建一个名为 aaa.json 的文件，内容如下...
                         
                     </div>
 
@@ -719,7 +736,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:06 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:01 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -747,7 +764,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-null_value/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -768,8 +785,8 @@
                    type="number"
                    value="7"
                    min="1"
-                   max="21"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">21</span>
+                   max="11"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">11</span>
         </div>
     
 
