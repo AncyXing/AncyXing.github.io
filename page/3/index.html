@@ -229,15 +229,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">
-                            ES测试分词结果
+                        <a href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">
+                            查看ES集群所有索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            es提供了一个测试分词的api接口，方便验证分词效果，endpoint是_analyze
-直接指定analyzer进行测试12345POST _analyze&#123;    &quot;analyzer&quot;: &quot;standard...
+                            使用命令
+1GET _cat/indices?v&amp;pretty
+
                         
                     </div>
 
@@ -245,7 +246,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 21:45:24 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 21:45:35 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -273,7 +274,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -348,66 +349,6 @@ pretty是将返回的信息以可读的JSON形式返回。
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">
-                            查看ES集群所有索引
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            使用命令
-1GET _cat/indices?v&amp;pretty
-
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 21:45:35 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/%E5%85%B3%E4%BA%8EES%E8%B7%AF%E7%94%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">
                             关于ES路由的一些思考
                         </a>
@@ -454,6 +395,65 @@ routing默认为文档_id，number_of_primary_shards为主分片数...
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E5%85%B3%E4%BA%8EES%E8%B7%AF%E7%94%B1%E7%9A%84%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">
+                            ES测试分词结果
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            es提供了一个测试分词的api接口，方便验证分词效果，endpoint是_analyze
+直接指定analyzer进行测试12345POST _analyze&#123;    &quot;analyzer&quot;: &quot;standard...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 21:45:24 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -704,20 +704,15 @@ routing默认为文档_id，number_of_primary_shards为主分片数...
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch如何像MySQL一样做多表联合查询
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">
+                            ElasticSearch地理位置查询
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            关系型数据库中有表的关联关系，在 es 中，我们也有类似的需求，例如订单表和商品表，在 es 中，这样的一对多一般来说有两种方式：
-
-嵌套文档（nested）
-父子文档
-
-嵌套文档假设：有一个电影文档，每个电影都有演员信息：
-123456789101...
+                            数据准备 创建一个索引：
+12345678910111213PUT geo&#123;  &quot;mappings&quot;: &#123;    &quot;properties&quot;: &#123;      &quot;name&q...
                         
                     </div>
 
@@ -725,7 +720,7 @@ routing默认为文档_id，number_of_primary_shards为主分片数...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:12:11 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:27 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -753,7 +748,7 @@ routing默认为文档_id，number_of_primary_shards为主分片数...
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
