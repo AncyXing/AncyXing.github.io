@@ -171,6 +171,65 @@
                     
 
                     <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">
+                            模糊查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            在实际搜索中，有时我们可能会打错字，从而导致搜索不到，在 match query 中，可以通过 fuzziness 属性实现模糊查询。
+fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？以LevenShtein 编辑距离为准。编辑距...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:10:08 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">
                             词项查询
                         </a>
@@ -290,15 +349,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
-                            非空查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">
+                            ElasticSearch中的倒排索引到底是什么
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            exists query 会返回指定字段中至少有一个非空值的文档：
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
+                            倒排索引是 es 中非常重要的索引结构，是从文档词项到文档 ID 的一个映射过程。
+“正排索引”我们在关系型数据库中见到的索引，就是“正排索引”。关系型数据库中的索引如下，假设我有一个博客表：我们可以针对这个表建立索引（正排索引）：
+当我们通过 id...
                         
                     </div>
 
@@ -306,7 +366,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:32 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:38 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -334,7 +394,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -349,20 +409,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">
-                            通配符查询
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">
+                            ElasticSearch动态映射与静态映射
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            wildcard query 即通配符查询。支持单字符和多字符通配符：
-
-？表示一个任意字符。
-*表示零个或者多个字符。
-
-查询所有姓张的作者的书：
-12345678910GET books/_search&#123;  &quot;query&qu...
+                            映射就是 Mapping，它用来定义一个文档以及文档所包含的字段该如何被存储和索引。所以，它其实有点类似于关系型数据库中表的定义。
+映射分类动态映射顾名思义，就是自动创建出来的映射。es 根据存入的文档，自动分析出来文档中字段的类型以及存储方式，这种...
                         
                     </div>
 
@@ -370,7 +425,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:11:32 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:12 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -398,7 +453,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -413,15 +468,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">
-                            桶聚合（bucket）
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">
+                            ElasticSearch四种字段类型详解
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            Terms AggregationTerms Aggregation 用于分组聚合，例如，统计各个出版社出版的图书总数量:
-1234567891011GET books/_search&#123;  &quot;aggs&quot;: &#123; ...
+                            核心类型字符串类型
+string：这是一个已经过期的字符串类型。在 es5 之前，用这个来描述字符串，现在的话，它已经被 text 和 keyword 替代了。
+text：如果一个字段是要被全文检索的，比如说博客内容、新闻内容、产品描述，那么可以使用...
                         
                     </div>
 
@@ -429,7 +485,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:49 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:22 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -457,7 +513,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -472,16 +528,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E7%AE%A1%E9%81%93%E8%81%9A%E5%90%88/">
-                            管道聚合
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                            ElasticSearch十大核心概念
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            管道聚合相当于在之前聚合的基础上，再次聚合。
-Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所出版图书的平均值，然后再统计所有出版社的平均值：
-12345678910111213141516171819202122...
+                            集群（Cluster）一个或者多个安装了 es 节点的服务器组织在一起，就是集群，这些节点共同持有数据，共同提供搜索服务。
+一个集群有一个名字，这个名字是集群的唯一标识，该名字成为 cluster name，默认的集群名称是 elasticsearc...
                         
                     </div>
 
@@ -489,7 +544,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:36 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:19 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -517,66 +572,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E7%AE%A1%E9%81%93%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">
-                            指标聚合
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            Max Aggregation统计最大值。例如查询价格最高的书：
-12345678910GET books/_search&#123;  &quot;aggs&quot;: &#123;    &quot;max_price&quot;: &#123...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:58 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -652,15 +648,15 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">
-                            ElasticSearch动态映射与静态映射
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%B9%B6%E5%8F%91%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E9%94%81%E5%92%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">
+                            ElasticSearch并发的处理方式锁和版本控制
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            映射就是 Mapping，它用来定义一个文档以及文档所包含的字段该如何被存储和索引。所以，它其实有点类似于关系型数据库中表的定义。
-映射分类动态映射顾名思义，就是自动创建出来的映射。es 根据存入的文档，自动分析出来文档中字段的类型以及存储方式，这种...
+                            当我们使用 es 的 API 去进行文档更新时，它首先读取原文档出来，然后对原文档进行更新，更新完成后再重新索引整个文档。不论你执行多少次更新，最终保存在 es 中的是最后一次更新的文档。但是如果有两个线程同时去更新，就有可能出问题。
+要解决问题，就...
                         
                     </div>
 
@@ -668,7 +664,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:12 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:05 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -696,7 +692,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%B9%B6%E5%8F%91%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E5%BC%8F%E9%94%81%E5%92%8C%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -711,16 +707,16 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">
-                            ElasticSearch中的倒排索引到底是什么
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E6%96%87%E6%A1%A3%E7%9A%84%E6%B7%BB%E5%8A%A0%E3%80%81%E8%8E%B7%E5%8F%96/">
+                            ElasticSearch文档的添加、获取
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            倒排索引是 es 中非常重要的索引结构，是从文档词项到文档 ID 的一个映射过程。
-“正排索引”我们在关系型数据库中见到的索引，就是“正排索引”。关系型数据库中的索引如下，假设我有一个博客表：我们可以针对这个表建立索引（正排索引）：
-当我们通过 id...
+                            新建文档首先新建一个索引。
+然后向索引中添加一个文档：
+123456PUT blog/_doc/1&#123;  &quot;title&quot;:&quot;6. ElasticSearch 文档基本操作&quot;,  &quot;date&q...
                         
                     </div>
 
@@ -728,7 +724,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:38 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:32 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -756,7 +752,7 @@ Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E6%96%87%E6%A1%A3%E7%9A%84%E6%B7%BB%E5%8A%A0%E3%80%81%E8%8E%B7%E5%8F%96/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
