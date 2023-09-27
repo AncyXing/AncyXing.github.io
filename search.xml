@@ -2093,50 +2093,53 @@
                      data-src="/images/ClassLoadingProcess.png"
                       alt="类加载过程"
                 ></p>
-<ol>
+<ul>
 <li>javac命令进行编译</li>
 <li>javap命令进行反编译</li>
-</ol>
-<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><ol>
+</ul>
+<h2 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h2><hr>
+<ol>
 <li>读取类的二进制流</li>
 <li>将流转为方法区数据结构，并存放到方法区</li>
 <li>在堆中产生Class对象</li>
 </ol>
-<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><h3 id="1-验证"><a href="#1-验证" class="headerlink" title="1.验证"></a>1.验证</h3><h4 id="1-1-验证class文件是否符合规范"><a href="#1-1-验证class文件是否符合规范" class="headerlink" title="1.1 验证class文件是否符合规范"></a>1.1 验证class文件是否符合规范</h4><p>文件格式校验</p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><hr>
+<h3 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h3><h4 id="验证class文件是否符合规范"><a href="#验证class文件是否符合规范" class="headerlink" title="验证class文件是否符合规范"></a>验证class文件是否符合规范</h4><p>文件格式校验</p>
 <ul>
 <li>是否是0xCAFEBABE开头</li>
 <li>版本号是否合理</li>
 </ul>
-<h4 id="1-2-元数据校验"><a href="#1-2-元数据校验" class="headerlink" title="1.2 元数据校验"></a>1.2 元数据校验</h4><ul>
+<h4 id="元数据校验"><a href="#元数据校验" class="headerlink" title="元数据校验"></a>元数据校验</h4><ul>
 <li>是否有父类</li>
 <li>是否继承了final类</li>
 <li>非抽象类是否实现了抽象类的所有抽象方法</li>
 </ul>
-<h4 id="1-3-字节码验证"><a href="#1-3-字节码验证" class="headerlink" title="1.3 字节码验证"></a>1.3 字节码验证</h4><ul>
+<h4 id="字节码验证"><a href="#字节码验证" class="headerlink" title="字节码验证"></a>字节码验证</h4><ul>
 <li>运行检查</li>
 <li>跳转指令是否指向合理的位置</li>
 </ul>
-<h4 id="1-4-符号引用验证"><a href="#1-4-符号引用验证" class="headerlink" title="1.4 符号引用验证"></a>1.4 符号引用验证</h4><ul>
+<h4 id="符号引用验证"><a href="#符号引用验证" class="headerlink" title="符号引用验证"></a>符号引用验证</h4><ul>
 <li>常量池中描述类是否存在</li>
 <li>访问的方法或字段是否存在且有足够的权限</li>
 </ul>
 <p>-Xverify:none关闭验证，可以加快启动速度</p>
-<h3 id="2-准备"><a href="#2-准备" class="headerlink" title="2.准备"></a>2.准备</h3><p>为类的静态变量分配内存，初始化</p>
+<h3 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h3><p>为类的静态变量分配内存，初始化</p>
 <ul>
 <li>final static修饰的变量直接赋值</li>
 <li>static修改的变量为默认值</li>
 </ul>
-<h3 id="3-解析"><a href="#3-解析" class="headerlink" title="3.解析"></a>3.解析</h3><p>将符号引用转换成直接引用</p>
-<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><h4 id="1-执行clinit方法"><a href="#1-执行clinit方法" class="headerlink" title="1.执行clinit方法"></a>1.执行clinit方法</h4><p>编译器自动收集类里面<strong>所有静态变量的赋值操作以及静态语句块</strong>（类构造器方法）</p>
+<h3 id="解析"><a href="#解析" class="headerlink" title="解析"></a>解析</h3><p>将符号引用转换成直接引用</p>
+<h2 id="初始化"><a href="#初始化" class="headerlink" title="初始化"></a>初始化</h2><hr>
+<h3 id="执行clinit方法"><a href="#执行clinit方法" class="headerlink" title="执行clinit方法"></a>执行clinit方法</h3><p>编译器自动收集类里面<strong>所有静态变量的赋值操作以及静态语句块</strong>（类构造器方法）</p>
 <ul>
 <li>初始化的顺序和源文件中的顺序一致</li>
 <li>如果有父类，会先调用父类的类构造器方法</li>
 </ul>
-<h4 id="2-调用init方法"><a href="#2-调用init方法" class="headerlink" title="2.调用init方法"></a>2.调用init方法</h4><ol>
+<h3 id="调用init方法"><a href="#调用init方法" class="headerlink" title="调用init方法"></a>调用init方法</h3><ol>
 <li>实例变量初始化</li>
 <li>构造方法</li>
 </ol>
-<h4 id="2-1初始化示例"><a href="#2-1初始化示例" class="headerlink" title="2.1初始化示例"></a>2.1初始化示例</h4><p>父类</p>
+<h3 id="初始化示例"><a href="#初始化示例" class="headerlink" title="初始化示例"></a>初始化示例</h3><p>父类</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestParent</span> &#123;</span><br><span class="line">    <span class="keyword">static</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类静态代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类代码块&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">TestParent</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;父类构造方法&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>子类</p>
@@ -2204,6 +2207,38 @@
 ]]></content>
       <tags>
         <tag>es</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>类的关系</title>
+    <url>/2023/09/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB/</url>
+    <content><![CDATA[<h1 id="类的关系"><a href="#类的关系" class="headerlink" title="类的关系"></a>类的关系</h1><h2 id="六种关系"><a href="#六种关系" class="headerlink" title="六种关系"></a>六种关系</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://jsd.cdn.zzko.cn/gh/AncyXing/picx-images-hosting@master/20230923/image.47175wtj4cs0.webp"
+                      alt="image"
+                ></p>
+<h2 id="组合与聚合的区别"><a href="#组合与聚合的区别" class="headerlink" title="组合与聚合的区别"></a>组合与聚合的区别</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://jsd.cdn.zzko.cn/gh/AncyXing/picx-images-hosting@master/20230923/image.chempfasc7c.webp"
+                      alt="image"
+                ></p>
+<h2 id="关联和聚合的区别"><a href="#关联和聚合的区别" class="headerlink" title="关联和聚合的区别"></a>关联和聚合的区别</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://jsd.cdn.zzko.cn/gh/AncyXing/picx-images-hosting@master/20230923/image.4hs2b1n5ghs0.webp"
+                      alt="image"
+                ></p>
+<h2 id="依赖和关联的区别"><a href="#依赖和关联的区别" class="headerlink" title="依赖和关联的区别"></a>依赖和关联的区别</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://jsd.cdn.zzko.cn/gh/AncyXing/picx-images-hosting@master/20230923/image.20ffwtg53340.webp"
+                      alt="image"
+                ></p>
+]]></content>
+      <tags>
+        <tag>设计模式</tag>
       </tags>
   </entry>
 </search>
