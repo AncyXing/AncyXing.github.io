@@ -179,6 +179,443 @@
                     
 
                     <h3 class="home-article-title">
+                        <a href="/2024/06/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/Cache%20Aside/">
+                            Cache Aside
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            缓存策略读操作
+先读缓存
+缓存没有读取数据库
+更新缓存
+
+写操作
+先更新数据库
+再删除缓存
+
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 19 2024 13:26:24 GMT+0800">2024-11-19</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/06/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/Cache%20Aside/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2024/05/08/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
+                            缓存穿透有哪些解决方法
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            什么是缓存穿透
+热点数据缓存失效后，大量并发请求直接访问数据库，导致数据库压力剧增
+查询本就不存在的数据，导致每次都要查询数据库
+
+影响
+数据库压力增大：由于每次请求都要访问数据库，导致数据库的压力增大。
+系统性能降低：每次请求都要访问数据库，导致系...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 19 2024 11:01:25 GMT+0800">2024-11-19</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/05/08/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2024/05/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E5%BB%B6%E6%97%B6%E5%8F%8C%E5%88%A0%E7%AD%96%E7%95%A5/">
+                            延时双删策略
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            用途在分布式系统中用于保持数据库存储和缓存数据一致性的常用方法
+策略思想有数据需要更新时，先删除缓存中的数据，再更新数据库，然后在一段时间后再次删除缓存
+步骤
+第一次删除缓存：在更新数据库之前，先删除对应的缓存数据，确保缓存中不会存在旧数据
+更新数据...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Tue Nov 19 2024 13:22:21 GMT+0800">2024-11-19</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/05/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E5%BB%B6%E6%97%B6%E5%8F%8C%E5%88%A0%E7%AD%96%E7%95%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/11/16/mysql/%E5%BF%98%E8%AE%B0root%E5%AF%86%E7%A0%81/">
+                            忘记root密码
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            修改数据库配置文件123vim  /etc/my.cnf--  添加如下参数skip_grant_tables
+重启数据库12/* centos 7 */sudo systemctl start mysql
+
+修改密码1234/* MySQL5.7 ...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:10:08 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/11/16/mysql/%E5%BF%98%E8%AE%B0root%E5%AF%86%E7%A0%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">
+                            group by在myql与oracle中的异同
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            oracleoracle要求查询的字段必须在group by分组后，若查询字段中有group by中没有的字段则查询会报错。
+mysqlmysql需要根据sql_mode进行判断，若配置了
+1ONLY_FULL_GROUP_BY
+则与oracle相同...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:09:13 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/11/16/mysql/%E6%B1%82%E5%92%8C%E4%B8%A4%E5%88%97%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%85%B6%E4%B8%AD%E4%B8%80%E5%88%97%E5%8F%AF%E8%83%BD%E5%8C%85%E5%90%ABnull%E5%80%BC/">
+                            求和两列数据，其中一列可能包含null值
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            现状非空值加null值得到的是null
+期望希望12加上null得到12，而不是null，为此需要将null转换为0值，在MySQL中可以使用IFNULL()函数，该函数也是MySQL独有的，它接收两个参数，语法如下：
+1IFNULL(express...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Thu Nov 21 2024 14:59:57 GMT+0800">2024-11-21</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/11/16/mysql/%E6%B1%82%E5%92%8C%E4%B8%A4%E5%88%97%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%85%B6%E4%B8%AD%E4%B8%80%E5%88%97%E5%8F%AF%E8%83%BD%E5%8C%85%E5%90%ABnull%E5%80%BC/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/11/16/mysql/%E6%97%A5%E6%9C%9F%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%AF%94%E8%BE%83/">
+                            日期字段类型的比较
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            当将日期类型字段与字符串型日期进行&lt;，&gt;，&gt;&#x3D;，&lt;&#x3D;，between比较的时候，Mysql会将字符串类型日期转换成长整型数字进行比较，从而加快查询速度。
+下面三种情况除外：
+
+两个表的字段的对比； 
+日期类...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Thu Nov 21 2024 14:59:57 GMT+0800">2024-11-21</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/11/16/mysql/%E6%97%A5%E6%9C%9F%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E7%9A%84%E6%AF%94%E8%BE%83/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
                         <a href="/2023/09/27/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/%E7%B1%BB%E7%9A%84%E5%85%B3%E7%B3%BB/">
                             类的关系
                         </a>
@@ -353,443 +790,6 @@ y在添加新功能或者删除...
                 </div>
             </li>
         
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">
-                            linux的链接
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            
-建立软链接ln -s 源文件 目标文件
-查看建立的软连接ls -il
-删除链接rm -rf 目标文件
-
-
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E6%89%BE%E5%87%BACPU%E5%8D%A0%E7%94%A8%E6%9C%80%E9%AB%98%E7%9A%84%E7%BA%BF%E7%A8%8B/">
-                            找出CPU占用最高的线程
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            1.找到进程pid
-1jps或者使用ps
-2.找出该进程内最耗费CPU的线程
-1top -Hp pid
-3.将线程ID转化为16进制
-1printf &quot;%x\n&quot;  线程ID
-4.jstack输出进程的堆栈信息
-注意：
-
-死锁，D...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E6%89%BE%E5%87%BACPU%E5%8D%A0%E7%94%A8%E6%9C%80%E9%AB%98%E7%9A%84%E7%BA%BF%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">
-                            linux往文件追加和覆盖内容
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            12345&gt;&gt; 是追加内容&gt; 是覆盖原有内容&lt; 是默认从键盘获得的输入，改成从文件，或者其它打开文件以及设备输入
-大于号：将一条命令执行结果（标准输出，或者错误输出，本来都要打印到屏幕上面的）重定向其它输出设备（文件，打开文件...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">
-                            安装vim
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            1.查看是否安装
-1rpm -qa|grep vim
-正确安装会返回3条结果
-2.如果少了其中的某一条,比如 vim-enhanced的就用命令来安装:
-1yum -y install vim-enhanced 
-
-3.如果上面的三条都沒有返回, 可...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">
-                            虚拟机重启后网络不可用
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            使用service network restart命令报错,原因和 NetworkManager 服务有冲突，这个好解决，直接关闭 NetworkManger 服务就好了
-解决方法123service NetworkManager stop## 并且...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">
-                            后台运行与不挂起操作
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            12&amp;：后台运行，当用户退出或关闭终端，则程序会被关闭nohup：不挂断运行，关闭终端或者用户退出都不会影响，可以一直运行，但是关闭xshell后，就不能够再接收任何输入了
-使用Ctrl + C发送SIGINT信号，&amp;后台运行的进程不...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                            常用命令
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            怎么查询IO磁盘占用了多少？1top命令、vmstat命令、iostat命令、iotop命令、pt-ioprofile命令
-
-怎么查询内存占用多少？1free
-
-查看磁盘使用率1df -h
-
-怎么查询CPU占用？1top
-
-怎么查询网络连接占用多少？...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
     </ul>
 
     <div class="home-paginator">
@@ -804,8 +804,8 @@ y在添加新功能或者删除...
                    type="number"
                    value="2"
                    min="1"
-                   max="13"
-            ><span class="delimiter base-color-size">/</span><span class="base-color-size">13</span>
+                   max="14"
+            ><span class="delimiter base-color-size">/</span><span class="base-color-size">14</span>
         </div>
     
 
