@@ -179,16 +179,17 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/11/16/mysql/%E6%B1%82%E5%92%8C%E4%B8%A4%E5%88%97%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%85%B6%E4%B8%AD%E4%B8%80%E5%88%97%E5%8F%AF%E8%83%BD%E5%8C%85%E5%90%ABnull%E5%80%BC/">
-                            求和两列数据，其中一列可能包含null值
+                        <a href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">
+                            group by在myql与oracle中的异同
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            现状非空值加null值得到的是null
-期望希望12加上null得到12，而不是null，为此需要将null转换为0值，在MySQL中可以使用IFNULL()函数，该函数也是MySQL独有的，它接收两个参数，语法如下：
-1IFNULL(express...
+                            oracleoracle要求查询的字段必须在group by分组后，若查询字段中有group by中没有的字段则查询会报错。
+mysqlmysql需要根据sql_mode进行判断，若配置了
+1ONLY_FULL_GROUP_BY
+则与oracle相同...
                         
                     </div>
 
@@ -196,7 +197,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Thu Nov 21 2024 14:59:57 GMT+0800">2024-11-21</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:09:13 GMT+0800">2024-11-16</span>
             </span>
         
 
@@ -224,7 +225,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/11/16/mysql/%E6%B1%82%E5%92%8C%E4%B8%A4%E5%88%97%E6%95%B0%E6%8D%AE%EF%BC%8C%E5%85%B6%E4%B8%AD%E4%B8%80%E5%88%97%E5%8F%AF%E8%83%BD%E5%8C%85%E5%90%ABnull%E5%80%BC/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -301,15 +302,18 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">
-                            linux往文件追加和覆盖内容
+                        <a href="/2023/09/07/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">
+                            版本号的分配规则
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            12345&gt;&gt; 是追加内容&gt; 是覆盖原有内容&lt; 是默认从键盘获得的输入，改成从文件，或者其它打开文件以及设备输入
-大于号：将一条命令执行结果（标准输出，或者错误输出，本来都要打印到屏幕上面的）重定向其它输出设备（文件，打开文件...
+                            版本号的分配规则版本号的分配规则
+版本控制策略规定了软件版本号的分配规则，因此指定该策略时应当尽量简单易懂。比如在用x.y.z格式进行版本管理时的规则如下所示：
+
+x在重大功能变更或新版本不向下兼容时加1，此时y与z的数字归0
+y在添加新功能或者删除...
                         
                     </div>
 
@@ -331,7 +335,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul>
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
                         
                     
                 </ul>
@@ -345,7 +349,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -360,19 +364,14 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">
-                            linux的链接
+                        <a href="/2023/09/07/linux/centos7%E6%9F%A5%E7%9C%8B%E9%98%B2%E7%81%AB%E5%A2%99/">
+                            centos7查看防火墙
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            
-建立软链接ln -s 源文件 目标文件
-查看建立的软连接ls -il
-删除链接rm -rf 目标文件
-
-
+                            12345678910## 设置开机启用防火墙：systemctl enable firewalld.service## 设置开机禁用防火墙：systemctl disable firewalld.service## 启动防火墙：systemctl ...
                         
                     </div>
 
@@ -408,66 +407,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">
-                            后台运行与不挂起操作
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            12&amp;：后台运行，当用户退出或关闭终端，则程序会被关闭nohup：不挂断运行，关闭终端或者用户退出都不会影响，可以一直运行，但是关闭xshell后，就不能够再接收任何输入了
-使用Ctrl + C发送SIGINT信号，&amp;后台运行的进程不...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/centos7%E6%9F%A5%E7%9C%8B%E9%98%B2%E7%81%AB%E5%A2%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -546,22 +486,19 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-                            常用命令
+                        <a href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">
+                            linux的链接
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            怎么查询IO磁盘占用了多少？1top命令、vmstat命令、iostat命令、iotop命令、pt-ioprofile命令
+                            
+建立软链接ln -s 源文件 目标文件
+查看建立的软连接ls -il
+删除链接rm -rf 目标文件
 
-怎么查询内存占用多少？1free
 
-查看磁盘使用率1df -h
-
-怎么查询CPU占用？1top
-
-怎么查询网络连接占用多少？...
                         
                     </div>
 
@@ -597,7 +534,125 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">
+                            linux往文件追加和覆盖内容
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            12345&gt;&gt; 是追加内容&gt; 是覆盖原有内容&lt; 是默认从键盘获得的输入，改成从文件，或者其它打开文件以及设备输入
+大于号：将一条命令执行结果（标准输出，或者错误输出，本来都要打印到屏幕上面的）重定向其它输出设备（文件，打开文件...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">
+                            后台运行与不挂起操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            12&amp;：后台运行，当用户退出或关闭终端，则程序会被关闭nohup：不挂断运行，关闭终端或者用户退出都不会影响，可以一直运行，但是关闭xshell后，就不能够再接收任何输入了
+使用Ctrl + C发送SIGINT信号，&amp;后台运行的进程不...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/09/07/linux/%E5%90%8E%E5%8F%B0%E8%BF%90%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8C%82%E8%B5%B7%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -679,14 +734,22 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/centos7%E6%9F%A5%E7%9C%8B%E9%98%B2%E7%81%AB%E5%A2%99/">
-                            centos7查看防火墙
+                        <a href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+                            常用命令
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            12345678910## 设置开机启用防火墙：systemctl enable firewalld.service## 设置开机禁用防火墙：systemctl disable firewalld.service## 启动防火墙：systemctl ...
+                            怎么查询IO磁盘占用了多少？1top命令、vmstat命令、iostat命令、iotop命令、pt-ioprofile命令
+
+怎么查询内存占用多少？1free
+
+查看磁盘使用率1df -h
+
+怎么查询CPU占用？1top
+
+怎么查询网络连接占用多少？...
                         
                     </div>
 
@@ -722,66 +785,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/centos7%E6%9F%A5%E7%9C%8B%E9%98%B2%E7%81%AB%E5%A2%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">
-                            虚拟机重启后网络不可用
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            使用service network restart命令报错,原因和 NetworkManager 服务有冲突，这个好解决，直接关闭 NetworkManger 服务就好了
-解决方法123service NetworkManager stop## 并且...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 17:59:37 GMT+0800">2024-11-16</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
