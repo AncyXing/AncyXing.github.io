@@ -179,14 +179,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
-                            ElasticSearch索引基本操作
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">
+                            ElasticSearch四种字段类型详解
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            新建索引通过 head 插件新建索引在 head 插件中，选择 索引选项卡，然后点击新建索引。新建索引时，需要填入索引名称、分片数以及副本数。创建成功后：0、1、2、3、4 分别表示索引的分片，粗框表示主分片，细框表示副本（点一下框，通过 prima...
+                            核心类型字符串类型
+string：这是一个已经过期的字符串类型。在 es5 之前，用这个来描述字符串，现在的话，它已经被 text 和 keyword 替代了。
+text：如果一个字段是要被全文检索的，比如说博客内容、新闻内容、产品描述，那么可以使用...
                         
                     </div>
 
@@ -194,7 +196,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:25 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:22 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -222,7 +224,136 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%9A%84%E5%AE%89%E8%A3%85/">
+                            ElasticSearch的安装
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            单节点安装
+首先打开 Es 官网，找到 Elasticsearch：https://www.elastic.co/cn/elasticsearch/ 下载安装合适版本
+将下载的文件解压，解压后的目录含义如下：
+
+
+
+
+目录
+含义
+
+
+
+modules...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:08 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%9A%84%E5%AE%89%E8%A3%85/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">
+                            ElasticSearch十大核心概念
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            集群（Cluster）一个或者多个安装了 es 节点的服务器组织在一起，就是集群，这些节点共同持有数据，共同提供搜索服务。
+一个集群有一个名字，这个名字是集群的唯一标识，该名字成为 cluster name，默认的集群名称是 elasticsearc...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:19 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -295,67 +426,6 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">
-                            删除索引
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            head 插件可以删除索引
-请求删除如下1DELETE test
-删除一个不存在的索引会报错。
-
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:04 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/kibana%E5%AE%89%E8%A3%85/">
                             kibana安装
                         </a>
@@ -402,66 +472,6 @@
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/kibana%E5%AE%89%E8%A3%85/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">
-                            复合类型
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            数组类型es 中没有专门的数组类型。默认情况下，任何字段都可以有一个或者多个值。需要注意的是，数组中的元素必须是同一种类型。
-添加数组是，数组中的第一个元素决定了整个数组的类型。
-对象类型（object）由于 JSON 本身具有层级关系，所以文档包含...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:51 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%90%88%E7%B1%BB%E5%9E%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -539,67 +549,6 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">
-                            批量操作
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            批量操作
-es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等操作。
-首先需要将所有的批量操作写入一个 JSON 文件中，然后通过 POST 请求将该 JSON 文件上传并执行。
-例如新建一个名为 aaa.json 的文件，内容如下...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:01 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%A4%8D%E5%88%B6%E7%B4%A2%E5%BC%95/">
                             复制索引
                         </a>
@@ -659,19 +608,14 @@ es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等�
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">
-                            映射参数-analyzer
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+                            ElasticSearch索引基本操作
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            analyzer定义文本字段的分词器。默认对索引和查询都是有效的。
-
-什么叫对索引和查询都是有效的？
-
-假设不用分词器，我们先来看一下索引的结果，创建一个索引并添加一个文档：
-123456PUT blogPUT blog/_doc/1&#123;  ...
+                            新建索引通过 head 插件新建索引在 head 插件中，选择 索引选项卡，然后点击新建索引。新建索引时，需要填入索引名称、分片数以及副本数。创建成功后：0、1、2、3、4 分别表示索引的分片，粗框表示主分片，细框表示副本（点一下框，通过 prima...
                         
                     </div>
 
@@ -679,7 +623,7 @@ es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等�
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:21 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:25 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -707,7 +651,7 @@ es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E7%B4%A2%E5%BC%95%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -722,16 +666,17 @@ es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等�
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-boost/">
-                            映射参数-boost
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">
+                            删除索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            boostboost 参数可以设置字段的权重。
-boost 有两种使用思路，一种就是在定义 mappings 的时候使用，在指定字段类型时使用；另一种就是在查询时使用。
-实际开发中建议使用后者，前者有问题：如果不重新索引文档，权重无法修改。mappi...
+                            head 插件可以删除索引
+请求删除如下1DELETE test
+删除一个不存在的索引会报错。
+
                         
                     </div>
 
@@ -739,7 +684,7 @@ boost 有两种使用思路，一种就是在定义 mappings 的时候使用，�
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:24 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:04 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -767,7 +712,68 @@ boost 有两种使用思路，一种就是在定义 mappings 的时候使用，�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-boost/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%88%A0%E9%99%A4%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">
+                            批量操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            批量操作
+es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等操作。
+首先需要将所有的批量操作写入一个 JSON 文件中，然后通过 POST 请求将该 JSON 文件上传并执行。
+例如新建一个名为 aaa.json 的文件，内容如下...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:01 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
