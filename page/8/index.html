@@ -179,21 +179,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/docker/%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/">
-                            容器中拷贝文件
+                        <a href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">
+                            ES测试分词结果
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            拷贝文件
-如何将服务器中的文件复制道容器中，命令是什么
-
-1docker cp [OPTIONS] [DEST_PATH] [CONTAINER_ID]:[SRC_PATH] 
-
-从容器中拷贝文件到宿主机中
-
-1docker cp [OPTIONS]...
+                            es提供了一个测试分词的api接口，方便验证分词效果，endpoint是_analyze
+直接指定analyzer进行测试12345POST _analyze&#123;    &quot;analyzer&quot;: &quot;standard...
                         
                     </div>
 
@@ -201,7 +195,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:19:10 GMT+0800">2024-11-16</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:12:07 GMT+0800">2024-11-16</span>
             </span>
         
 
@@ -215,7 +209,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul>
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/docker/">docker</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
                         
                     
                 </ul>
@@ -229,7 +223,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/docker/%E5%AE%B9%E5%99%A8%E4%B8%AD%E6%8B%B7%E8%B4%9D%E6%96%87%E4%BB%B6/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%B5%8B%E8%AF%95%E5%88%86%E8%AF%8D%E7%BB%93%E6%9E%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -244,17 +238,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%881%EF%BC%89/">
-                            Git工作区、暂存区和版本库（1）
+                        <a href="/2023/08/06/ES/pretty%E7%9A%84%E4%BD%9C%E7%94%A8/">
+                            pretty的作用
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            基本概念我们先来理解下 Git 工作区、暂存区和版本库概念：
+                            1curl -XPOST &#x27;localhost:9200/bank/account/_bulk?pretty&#x27; 
+pretty是将返回的信息以可读的JSON形式返回。
 
-工作区：就是你在电脑里能看到的目录。
-暂存区：英文叫 stage 或 index。一般存放在 .git 目录下的 index 文件（.git&#x2F;index）中，所以我们把暂存区有...
                         
                     </div>
 
@@ -262,7 +255,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:24:59 GMT+0800">2024-11-16</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:12:08 GMT+0800">2024-11-16</span>
             </span>
         
 
@@ -276,7 +269,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul>
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
                         
                     
                 </ul>
@@ -290,7 +283,125 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%881%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/pretty%E7%9A%84%E4%BD%9C%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E6%93%8D%E4%BD%9C%E6%97%B6ES%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E4%BF%9D%E5%AD%98%E6%8A%A5%E9%94%99/">
+                            进行修改操作时ES日期格式保存报错
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            报错信息如下1[MapperParsingException[failed to parse [lastmodifytime]]; nested: IllegalArgumentException[Invalid format: &quot;2021...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:12:07 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%BF%9B%E8%A1%8C%E4%BF%AE%E6%94%B9%E6%93%8D%E4%BD%9C%E6%97%B6ES%E6%97%A5%E6%9C%9F%E6%A0%BC%E5%BC%8F%E4%BF%9D%E5%AD%98%E6%8A%A5%E9%94%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">
+                            查看ES集群所有索引
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            使用命令
+1GET _cat/indices?v&amp;pretty
+
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:12:07 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E6%9F%A5%E7%9C%8BES%E9%9B%86%E7%BE%A4%E6%89%80%E6%9C%89%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -370,15 +481,17 @@ git仓库(Remote Directory)
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/git/git%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">
-                            git功能开发流程
+                        <a href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%881%EF%BC%89/">
+                            Git工作区、暂存区和版本库（1）
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            功能或BUG修复流程
+                            基本概念我们先来理解下 Git 工作区、暂存区和版本库概念：
 
+工作区：就是你在电脑里能看到的目录。
+暂存区：英文叫 stage 或 index。一般存放在 .git 目录下的 index 文件（.git&#x2F;index）中，所以我们把暂存区有...
                         
                     </div>
 
@@ -414,7 +527,7 @@ git仓库(Remote Directory)
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/git/git%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/git/Git%E5%B7%A5%E4%BD%9C%E5%8C%BA%E3%80%81%E6%9A%82%E5%AD%98%E5%8C%BA%E5%92%8C%E7%89%88%E6%9C%AC%E5%BA%93%EF%BC%881%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -489,15 +602,15 @@ git仓库(Remote Directory)
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A4%8D%E5%90%88%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch复合查询
+                        <a href="/2023/08/06/git/git%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">
+                            git功能开发流程
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            constant_score query当我们不关心检索词项的频率（TF）对搜索结果排序的影响时，可以使用 constant_score 将查询语句或者过滤语句包裹起来。
-12345678910111213GET books/_search&#123...
+                            功能或BUG修复流程
+
                         
                     </div>
 
@@ -505,7 +618,7 @@ git仓库(Remote Directory)
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:03 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 18:24:59 GMT+0800">2024-11-16</span>
             </span>
         
 
@@ -519,7 +632,7 @@ git仓库(Remote Directory)
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul>
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
                         
                     
                 </ul>
@@ -533,7 +646,7 @@ git仓库(Remote Directory)
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A4%8D%E5%90%88%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/git/git%E5%8A%9F%E8%83%BD%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -548,15 +661,15 @@ git仓库(Remote Directory)
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%85%A8%E6%96%87%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch全文查询
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">
+                            指标聚合
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            match querymatch query 会对查询语句进行分词，分词后，如果查询语句中的任何一个词项被匹配，则文档就会被索引到。
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;...
+                            Max Aggregation统计最大值。例如查询价格最高的书：
+12345678910GET books/_search&#123;  &quot;aggs&quot;: &#123;    &quot;max_price&quot;: &#123...
                         
                     </div>
 
@@ -564,7 +677,7 @@ git仓库(Remote Directory)
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:50 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:58 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -592,7 +705,7 @@ git仓库(Remote Directory)
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%85%A8%E6%96%87%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -607,15 +720,15 @@ git仓库(Remote Directory)
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch地理位置查询
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">
+                            桶聚合（bucket）
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            数据准备 创建一个索引：
-12345678910111213PUT geo&#123;  &quot;mappings&quot;: &#123;    &quot;properties&quot;: &#123;      &quot;name&q...
+                            Terms AggregationTerms Aggregation 用于分组聚合，例如，统计各个出版社出版的图书总数量:
+1234567891011GET books/_search&#123;  &quot;aggs&quot;: &#123; ...
                         
                     </div>
 
@@ -623,7 +736,7 @@ git仓库(Remote Directory)
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:27 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:37:49 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -651,130 +764,7 @@ git仓库(Remote Directory)
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E9%AB%98%E4%BA%AE/">
-                            ElasticSearch搜索高亮
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            普通高亮，默认会自动添加 em 标签：
-12345678910111213GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;match&quot;: &#123;      &qu...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:07:19 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E9%AB%98%E4%BA%AE/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch如何像MySQL一样做多表联合查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            关系型数据库中有表的关联关系，在 es 中，我们也有类似的需求，例如订单表和商品表，在 es 中，这样的一对多一般来说有两种方式：
-
-嵌套文档（nested）
-父子文档
-
-嵌套文档假设：有一个电影文档，每个电影都有演员信息：
-123456789101...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:12:11 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
