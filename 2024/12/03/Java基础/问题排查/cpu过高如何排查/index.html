@@ -211,7 +211,7 @@
             
                 <span class="meta-info-item article-update-date">
                     <i class="icon fas fa-file-pen"></i>&nbsp;
-                    <span class="pc">2024-12-03 12:18:40</span>
+                    <span class="pc">2024-12-04 12:01:25</span>
                 </span>
             
         
@@ -239,7 +239,7 @@
         
         
             <span class="meta-info-item article-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>106 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>298 字</span>
             </span>
         
         
@@ -265,10 +265,26 @@
             <div class="article-content keep-markdown-body">
                 
 
-                <ol>
+                <h2 id="使用arthas"><a href="#使用arthas" class="headerlink" title="使用arthas"></a>使用arthas</h2><ol>
 <li>排除GC影响，频繁的GC会占用大量的CPU资源</li>
 <li>定位到高CPU占用的线程，使用dashboard命令，重点关注进程信息，识别出与应用程序相关的线程</li>
 <li>分析高CPU消耗的线程，thread -n 5查看最繁忙的5个线程的堆栈信息，找到线程停留在哪个方法上执行，定位到具体的方法和代码位置</li>
+</ol>
+<h2 id="top-jstack"><a href="#top-jstack" class="headerlink" title="top+jstack"></a>top+jstack</h2><ol>
+<li>使用top找到cpu占用率高的进程</li>
+<li>使用top -Hp 进程号，找到进程中各线程的cpu占用率</li>
+<li>使用jstack 线程号 &gt; out.txt，导出堆栈信息（16进制）</li>
+<li>printf %x 线程号，获取16进制的线程号表示</li>
+<li>cat out.txt | grep -A 30 16进制的线程号表示，向后找30行</li>
+<li>找到问题的代码和方法</li>
+</ol>
+<h2 id="可能的原因"><a href="#可能的原因" class="headerlink" title="可能的原因"></a>可能的原因</h2><ol>
+<li>while无限循环，避免无限循环，sleep 让循环执行的慢点</li>
+<li>频繁的GC，垃圾收集线程频繁的执行，降低收集频率</li>
+<li>频繁的上下文切换</li>
+<li>正则表达式，回溯操作</li>
+<li>序列化和反序列化，选择合理的api实现</li>
+<li>频繁创建对象，合理使用单例</li>
 </ol>
 
             </div>
@@ -334,10 +350,10 @@
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/12/02/mysql/%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8C%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"
+                               href="/2024/12/02/mysql/%E4%B8%89%E5%A4%A7%E8%8C%83%E5%BC%8F/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item text-ellipsis">如何进行性能优化.md</span>
+                                <span class="post-nav-title-item text-ellipsis">三大范式.md</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
@@ -442,7 +458,7 @@
             <div class="pc-post-toc">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8arthas"><span class="nav-number">1.</span> <span class="nav-text">使用arthas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top-jstack"><span class="nav-number">2.</span> <span class="nav-text">top+jstack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">3.</span> <span class="nav-text">可能的原因</span></a></li></ol>
     </div>
 </div>
 
@@ -619,7 +635,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap">
     <div class="post-toc">
-        
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8arthas"><span class="nav-number">1.</span> <span class="nav-text">使用arthas</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#top-jstack"><span class="nav-number">2.</span> <span class="nav-text">top+jstack</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="nav-number">3.</span> <span class="nav-text">可能的原因</span></a></li></ol>
     </div>
 </div>
 

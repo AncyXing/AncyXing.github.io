@@ -179,189 +179,6 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch如何像MySQL一样做多表联合查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            关系型数据库中有表的关联关系，在 es 中，我们也有类似的需求，例如订单表和商品表，在 es 中，这样的一对多一般来说有两种方式：
-
-嵌套文档（nested）
-父子文档
-
-嵌套文档假设：有一个电影文档，每个电影都有演员信息：
-123456789101...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:12:11 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%A6%82%E4%BD%95%E5%83%8FMySQL%E4%B8%80%E6%A0%B7%E5%81%9A%E5%A4%9A%E8%A1%A8%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E5%85%A5%E9%97%A8/">
-                            ElasticSearch搜索入门
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            搜索分为两个过程：
-当向索引中保存文档时，默认情况下，es 会保存两份内容，一份是 _source  中的数据，另一份则是通过分词、排序等一系列过程生成的倒排索引文件，倒排索引中保存了词项和文档之间的对应关系。
-搜索时，当 es 接收到用户的搜索请求...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:07:54 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E5%85%A5%E9%97%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">
-                            ElasticSearch地理位置查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            数据准备 创建一个索引：
-12345678910111213PUT geo&#123;  &quot;mappings&quot;: &#123;    &quot;properties&quot;: &#123;      &quot;name&q...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:06:27 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E7%89%B9%E6%AE%8A%E6%9F%A5%E8%AF%A2/">
                             ElasticSearch特殊查询
                         </a>
@@ -480,15 +297,16 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%83%B3%E6%90%9C%E7%B4%A2%E9%99%84%E8%BF%91%E8%AF%84%E5%88%86%E8%BE%83%E9%AB%98%E7%9A%84%E9%A4%90%E5%8E%85ElasticSearch%E5%A4%A7%E6%98%BE%E8%BA%AB%E6%89%8B/">
-                            想搜索附近评分较高的餐厅ElasticSearch大显身手
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E5%85%A5%E9%97%A8/">
+                            ElasticSearch搜索入门
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            场景：场景：例如想要搜索附近的肯德基，搜索的关键字是肯德基，但是我希望能够将评分较高的肯德基优先展示出来。但是默认的评分策略是没有办法考虑到餐厅评分的，他只是考虑相关性，这个时候可以通过 function_score query 来实现。
-准备两条测...
+                            搜索分为两个过程：
+当向索引中保存文档时，默认情况下，es 会保存两份内容，一份是 _source  中的数据，另一份则是通过分词、排序等一系列过程生成的倒排索引文件，倒排索引中保存了词项和文档之间的对应关系。
+搜索时，当 es 接收到用户的搜索请求...
                         
                     </div>
 
@@ -496,7 +314,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:12:04 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:07:54 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -524,7 +342,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%83%B3%E6%90%9C%E7%B4%A2%E9%99%84%E8%BF%91%E8%AF%84%E5%88%86%E8%BE%83%E9%AB%98%E7%9A%84%E9%A4%90%E5%8E%85ElasticSearch%E5%A4%A7%E6%98%BE%E8%BA%AB%E6%89%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/ElasticSearch%E6%90%9C%E7%B4%A2%E5%85%A5%E9%97%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -760,6 +578,184 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
 
     
         <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A0%B9%E6%8D%AEid%E5%AF%B9%E6%95%B0%E6%8D%AE%E8%BF%9B%E8%A1%8C%E6%9B%B4%E6%96%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">
+                            通过id进行查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            根据指定的 id 查询。
+12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;ids&quot;:&#123;      &quot;values&quot;:  [...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:11:15 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%83%B3%E6%90%9C%E7%B4%A2%E9%99%84%E8%BF%91%E8%AF%84%E5%88%86%E8%BE%83%E9%AB%98%E7%9A%84%E9%A4%90%E5%8E%85ElasticSearch%E5%A4%A7%E6%98%BE%E8%BA%AB%E6%89%8B/">
+                            想搜索附近评分较高的餐厅ElasticSearch大显身手
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            场景：场景：例如想要搜索附近的肯德基，搜索的关键字是肯德基，但是我希望能够将评分较高的肯德基优先展示出来。但是默认的评分策略是没有办法考虑到餐厅评分的，他只是考虑相关性，这个时候可以通过 function_score query 来实现。
+准备两条测...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:12:04 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%83%B3%E6%90%9C%E7%B4%A2%E9%99%84%E8%BF%91%E8%AF%84%E5%88%86%E8%BE%83%E9%AB%98%E7%9A%84%E9%A4%90%E5%8E%85ElasticSearch%E5%A4%A7%E6%98%BE%E8%BA%AB%E6%89%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">
+                            词项查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            词项查询即 term 查询，就是根据词去查询，查询指定字段中包含给定单词的文档，term 查询不被解析，只有搜索的词和文档中的词精确匹配，才会返回文档。应用场景如：人名、地名等等。
+查询 name 字段中包含 十一五 的文档。
+12345678GET...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 22:09:00 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
