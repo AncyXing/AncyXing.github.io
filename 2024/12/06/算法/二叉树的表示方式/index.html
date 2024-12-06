@@ -211,7 +211,7 @@
             
                 <span class="meta-info-item article-update-date">
                     <i class="icon fas fa-file-pen"></i>&nbsp;
-                    <span class="pc">2024-12-06 16:10:38</span>
+                    <span class="pc">2024-12-06 17:52:53</span>
                 </span>
             
         
@@ -239,7 +239,7 @@
         
         
             <span class="meta-info-item article-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>205 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>197 字</span>
             </span>
         
         
@@ -267,7 +267,7 @@
 
                 <h2 id="数组表示"><a href="#数组表示" class="headerlink" title="数组表示"></a>数组表示</h2><p>按照层序遍历的顺序将数据存储在数组中，一层接一层存储，每一层的元素从左往右</p>
 <h3 id="一些计算公式"><a href="#一些计算公式" class="headerlink" title="一些计算公式"></a>一些计算公式</h3><p>某个节点的索引下标为<strong>i</strong>，则该节点的左子节点索引为<strong>2i+1</strong>，右子节点索引为<strong>2i+2</strong></p>
-<h3 id="表示任意二叉树"><a href="#表示任意二叉树" class="headerlink" title="表示任意二叉树"></a>表示任意二叉树</h3><p>使用null填充空位，层序遍历序列就可以唯一表示二叉树了。值得说明的是，<strong>完全二叉树非常适合使用数组来表示</strong>，因为空只出现在最底层且靠右的位置，可以省略存储所有 None</p>
+<h3 id="表示任意二叉树"><a href="#表示任意二叉树" class="headerlink" title="表示任意二叉树"></a>表示任意二叉树</h3><p>使用null填充空位，层序遍历就可以唯一表示二叉树了。<strong>完全二叉树非常适合使用数组来表示</strong>，因为空只出现在最底层且靠右的位置，可以省略存储所有 None</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 层序遍历 */</span></span><br><span class="line"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title function_">levelOrder</span><span class="params">()</span> &#123;</span><br><span class="line">    List&lt;Integer&gt; res = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="comment">// 直接遍历数组</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; size(); i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (val(i) != <span class="literal">null</span>) res.add(val(i));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
             </div>
 
@@ -313,29 +313,14 @@
             
                 <div class="article-nav">
                     
-                        <div class="article-prev">
-                            <a class="prev"
-                               rel="prev"
-                               href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"
-                            >
-                            <span class="left arrow-icon flex-center">
-                              <i class="fas fa-chevron-left"></i>
-                            </span>
-                                <span class="title flex-center">
-                                <span class="post-nav-title-item text-ellipsis">二叉搜索树.md</span>
-                                <span class="post-nav-item">上一篇</span>
-                            </span>
-                            </a>
-                        </div>
-                    
                     
                         <div class="article-next">
                             <a class="next"
                                rel="next"
-                               href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"
+                               href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%90%9C%E7%B4%A2%E6%A0%91/"
                             >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item text-ellipsis">二叉树的遍历.md</span>
+                                <span class="post-nav-title-item text-ellipsis">二叉搜索树.md</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                                 <span class="right arrow-icon flex-center">
