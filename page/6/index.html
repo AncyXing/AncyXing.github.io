@@ -179,6 +179,68 @@
                     
 
                     <h3 class="home-article-title">
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Collector.toMap%E5%87%BA%E7%8E%B0%E7%9A%84Duplicatekey%E9%97%AE%E9%A2%98/">
+                            Collector.toMap出现的Duplicatekey问题
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            当键值重复时会抛出异常：
+1java.lang.IllegalStateException: Duplicate key ...
+
+原因是默认的解决key重复的方法是抛出异常
+123private static &lt;T&gt; BinaryOpe...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 14:24:24 GMT+0800">2024-11-16</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Collector.toMap%E5%87%BA%E7%8E%B0%E7%9A%84Duplicatekey%E9%97%AE%E9%A2%98/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
                         <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/java%E8%8E%B7%E5%8F%96%E5%BD%93%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%A4%A9%E5%8F%8A%E6%9C%80%E5%90%8E%E4%B8%80%E5%A4%A9/">
                             java获取当年第一天及最后一天
                         </a>
@@ -297,18 +359,17 @@ BufferedR...
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Collector.toMap%E5%87%BA%E7%8E%B0%E7%9A%84Duplicatekey%E9%97%AE%E9%A2%98/">
-                            Collector.toMap出现的Duplicatekey问题
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/finally%E5%92%8Creturn/">
+                            finally和return
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            当键值重复时会抛出异常：
-1java.lang.IllegalStateException: Duplicate key ...
-
-原因是默认的解决key重复的方法是抛出异常
-123private static &lt;T&gt; BinaryOpe...
+                            
+当 try 代码块和 catch 代码块中有 return 语句时，finally 仍然会被执行。
+执行 try 代码块或 catch 代码块中的 return 语句之前，都会先执行 finally 语句。
+无论在 finally 代码块中是否修改...
                         
                     </div>
 
@@ -316,7 +377,7 @@ BufferedR...
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Nov 16 2024 14:24:24 GMT+0800">2024-11-16</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:21:45 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -344,124 +405,7 @@ BufferedR...
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/Collector.toMap%E5%87%BA%E7%8E%B0%E7%9A%84Duplicatekey%E9%97%AE%E9%A2%98/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/list%E8%BD%AC%E6%88%90map/">
-                            list转成map
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            使用java8中的stream12Map&lt;String, MaterialInfoVo&gt; materialInfoVoMap = materialInfoVos.stream()					.collect(Collectors.toMap...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:00 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/list%E8%BD%AC%E6%88%90map/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E6%95%B0/">
-                            如何生成一个唯一数
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            生成系统中的唯一数（单机~）方式1生成String类型的唯一值使用UUID
-12// 返回32位的唯一值，用到了 MAC、时间戳、随机数等因素生成UUID.randomUUID().toString().replace(&quot;-&quot;, ...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:22 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E6%95%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/finally%E5%92%8Creturn/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -594,6 +538,65 @@ BufferedR...
                     
 
                     <h3 class="home-article-title">
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E6%95%B0/">
+                            如何生成一个唯一数
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            生成系统中的唯一数（单机~）方式1生成String类型的唯一值使用UUID
+12// 返回32位的唯一值，用到了 MAC、时间戳、随机数等因素生成UUID.randomUUID().toString().replace(&quot;-&quot;, ...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:22 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%A6%82%E4%BD%95%E7%94%9F%E6%88%90%E4%B8%80%E4%B8%AA%E5%94%AF%E4%B8%80%E6%95%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
                         <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E4%BD%BF%E7%94%A8%E5%AE%8C%E5%AF%B9%E8%B1%A1%E5%90%8E%E8%A6%81%E6%89%8B%E5%8A%A8%E7%BD%AE%E4%B8%BA%E7%A9%BA%E5%90%97/">
                             使用完对象后要手动置为空吗
                         </a>
@@ -655,68 +658,6 @@ BufferedR...
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%AF%B9%E9%9B%86%E5%90%88%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/">
-                            对集合进行排序
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            jdk默认的排序默认为升序
-Comparablea1,a2两数比较，若a1 &lt; a2则返回-1；若a1 &#x3D; a2，则返回0；若a1 &gt; a2，则返回1
-升序排列
-a1 &lt; a2，return -1
-a1 &#x3D; a2...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:14 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E5%AF%B9%E9%9B%86%E5%90%88%E8%BF%9B%E8%A1%8C%E6%8E%92%E5%BA%8F/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E4%B8%AD%E6%B3%A8%E5%85%A5%E6%9C%8D%E5%8A%A1/">
                             线程中注入服务
                         </a>
@@ -762,6 +703,64 @@ a1 &#x3D; a2...
 
     
         <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/%E7%BA%BF%E7%A8%8B%E4%B8%AD%E6%B3%A8%E5%85%A5%E6%9C%8D%E5%8A%A1/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/list%E8%BD%AC%E6%88%90map/">
+                            list转成map
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            使用java8中的stream12Map&lt;String, MaterialInfoVo&gt; materialInfoVoMap = materialInfoVos.stream()					.collect(Collectors.toMap...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:22:00 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/Java%E5%9F%BA%E7%A1%80/list%E8%BD%AC%E6%88%90map/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
