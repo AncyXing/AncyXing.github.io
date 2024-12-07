@@ -179,19 +179,18 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">
-                            映射参数-analyzer
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">
+                            映射参数-coerce
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            analyzer定义文本字段的分词器。默认对索引和查询都是有效的。
-
-什么叫对索引和查询都是有效的？
-
-假设不用分词器，我们先来看一下索引的结果，创建一个索引并添加一个文档：
-123456PUT blogPUT blog/_doc/1&#123;  ...
+                            coercecoerce 用来清除脏数据，默认为 true。
+例如一个数字，在 JSON 中，用户可能写错了：
+1&#123;&quot;age&quot;:&quot;99&quot;&#125;
+或者 ：
+1&#123;&quot;age&quo...
                         
                     </div>
 
@@ -199,7 +198,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:21 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:27 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -227,7 +226,245 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-analyzer/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">
+                            批量操作
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            批量操作
+es 中通过 Bulk API 可以执行批量索引、批量删除、批量更新等操作。
+首先需要将所有的批量操作写入一个 JSON 文件中，然后通过 POST 请求将该 JSON 文件上传并执行。
+例如新建一个名为 aaa.json 的文件，内容如下...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:01 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%89%B9%E9%87%8F%E6%93%8D%E4%BD%9C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">
+                            映射参数-enabled
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            es 默认会索引所有的字段，但是有的字段可能只需要存储，   不需要索引。此时可以通过 enabled 字段来控制：
+123456789101112131415161718192021222324PUT blog&#123;  &quot;mappi...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:37 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">
+                            映射参数-fields
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            fields 参数可以让同一字段有多种不同的索引方式。例如：
+1234567891011121314151617181920212223242526272829PUT blog&#123;  &quot;mappings&quot;: &#123; ...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:40 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">
+                            映射参数-ignore_above
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            igbore_above 用于指定分词和索引的字符串最大长度，超过最大长度的话，该字段将不会被索引，这个字段只适用于 keyword 类型。
+123456789101112131415161718192021222324252627282930PUT...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:16:30 GMT+0800">2023-08-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -300,18 +537,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">
-                            映射参数-coerce
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">
+                            映射参数-format
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            coercecoerce 用来清除脏数据，默认为 true。
-例如一个数字，在 JSON 中，用户可能写错了：
-1&#123;&quot;age&quot;:&quot;99&quot;&#125;
-或者 ：
-1&#123;&quot;age&quo...
+                            日期格式。format 可以规范日期格式，而且一次可以定义多个 format。
+123456789101112131415161718192021PUT users&#123;  &quot;mappings&quot;: &#123;    &qu...
                         
                     </div>
 
@@ -319,7 +553,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:27 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:43 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -347,7 +581,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-coerce/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -422,242 +656,6 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">
-                            映射参数-fields
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            fields 参数可以让同一字段有多种不同的索引方式。例如：
-1234567891011121314151617181920212223242526272829PUT blog&#123;  &quot;mappings&quot;: &#123; ...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:40 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-fields/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">
-                            映射参数-enabled
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            es 默认会索引所有的字段，但是有的字段可能只需要存储，   不需要索引。此时可以通过 enabled 字段来控制：
-123456789101112131415161718192021222324PUT blog&#123;  &quot;mappi...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:37 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-enabled/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">
-                            映射参数-format
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            日期格式。format 可以规范日期格式，而且一次可以定义多个 format。
-123456789101112131415161718192021PUT users&#123;  &quot;mappings&quot;: &#123;    &qu...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:43 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-format/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">
-                            映射参数-ignore_above
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            igbore_above 用于指定分词和索引的字符串最大长度，超过最大长度的话，该字段将不会被索引，这个字段只适用于 keyword 类型。
-123456789101112131415161718192021222324252627282930PUT...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:16:30 GMT+0800">2023-08-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_above/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-index/">
                             映射参数-index
                         </a>
@@ -717,15 +715,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_malformed/">
-                            映射参数-ignore_malformed
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-include_in_all/">
+                            映射参数-include_in_all
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            ignore_malformed 可以忽略不规则的数据，该参数默认为 false。
-12345678910111213141516171819202122232425262728293031323334PUT users&#123;  &quot;m...
+                            这个是针对 _all 字段的，但是在 es7 中，该字段已经被废弃了。
+
                         
                     </div>
 
@@ -733,7 +731,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:47 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:50 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -761,7 +759,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-ignore_malformed/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-include_in_all/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
