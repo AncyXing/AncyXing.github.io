@@ -213,11 +213,11 @@
                         
                             特点
 各种操作的时间复杂度保持在O(logn)，有高效的数据操作性能
-适用于需要频繁进行增删改查操作的场景
-平衡二叉搜索树
+适用于高频查找、低频增删的场景
+是平衡二叉搜索树
+红黑树也是一种常见的平衡二叉搜索树
 
-常见术语节点的高度从该节点到最远叶子节点所经过的边的数量，叶子节点的高度为0，空节点的高度为-1
-节点的平衡因子节点左子树的...
+常见术语节点的高度从该节点到最远叶子节点所经过的边的数量，叶子节点的高度为0，空节点的高度为...
                         
                     </div>
 
@@ -225,7 +225,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Dec 07 2024 11:34:41 GMT+0800">2024-12-07</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sat Dec 07 2024 11:54:22 GMT+0800">2024-12-07</span>
             </span>
         
 
@@ -254,126 +254,6 @@
 
     
         <a class="home-read-more" href="/2024/12/07/%E7%AE%97%E6%B3%95/%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F/">
-                            二叉树的表示方式.md
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            数组表示按照层序遍历的顺序将数据存储在数组中，一层接一层存储，每一层的元素从左往右
-一些计算公式某个节点的索引下标为i，则该节点的左子节点索引为2i+1，右子节点索引为2i+2
-表示任意二叉树使用null填充空位，层序遍历就可以唯一表示二叉树了。完全...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Fri Dec 06 2024 17:52:53 GMT+0800">2024-12-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
-                        <a href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">
-                            二叉树的遍历.md
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            二叉树的遍历方式层序遍历从顶部到底部逐层遍历二叉树，并在每一层按照从左到右的顺序访问节点，属于广度优先遍历。
-实现基于队列进行实现，逐层推进与先进先出的思想相符
-123456789101112131415161718/* 层序遍历 */public ...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Fri Dec 06 2024 11:48:23 GMT+0800">2024-12-06</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -453,6 +333,126 @@
                     
 
                     <h3 class="home-article-title">
+                        <a href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">
+                            二叉树的遍历.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            二叉树的遍历方式层序遍历从顶部到底部逐层遍历二叉树，并在每一层按照从左到右的顺序访问节点，属于广度优先遍历。
+实现基于队列进行实现，逐层推进与先进先出的思想相符
+123456789101112131415161718/* 层序遍历 */public ...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Fri Dec 06 2024 11:48:23 GMT+0800">2024-12-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F/">
+                            二叉树的表示方式.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            数组表示按照层序遍历的顺序将数据存储在数组中，一层接一层存储，每一层的元素从左往右
+一些计算公式某个节点的索引下标为i，则该节点的左子节点索引为2i+1，右子节点索引为2i+2
+表示任意二叉树使用null填充空位，层序遍历就可以唯一表示二叉树了。完全...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Fri Dec 06 2024 17:52:53 GMT+0800">2024-12-06</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
                         <a href="/2024/12/05/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91/">
                             二叉树.md
                         </a>
@@ -517,67 +517,6 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">
-                            cpu过高如何排查.md
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            使用arthas
-排除GC影响，频繁的GC会占用大量的CPU资源
-定位到高CPU占用的线程，使用dashboard命令，重点关注进程信息，识别出与应用程序相关的线程
-分析高CPU消耗的线程，thread -n 5查看最繁忙的5个线程的堆栈信息，找到线...
-                        
-                    </div>
-
-                    <div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Wed Dec 04 2024 12:01:25 GMT+0800">2024-12-04</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul>
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-
-                    <h3 class="home-article-title">
                         <a href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">
                             内存泄露如何排查.md
                         </a>
@@ -626,6 +565,67 @@
 
     
         <a class="home-read-more" href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+
+                    <h3 class="home-article-title">
+                        <a href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">
+                            cpu过高如何排查.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            使用arthas
+排除GC影响，频繁的GC会占用大量的CPU资源
+定位到高CPU占用的线程，使用dashboard命令，重点关注进程信息，识别出与应用程序相关的线程
+分析高CPU消耗的线程，thread -n 5查看最繁忙的5个线程的堆栈信息，找到线...
+                        
+                    </div>
+
+                    <div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Wed Dec 04 2024 12:01:25 GMT+0800">2024-12-04</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/java/">java</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
