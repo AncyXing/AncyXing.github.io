@@ -179,19 +179,23 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">
-                            查看索引
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">
+                            映射参数-term_vectors
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            查看索引head 插件查看方式如下： 
-请求查看方式如下：1GET book/_settings
-结果如下：也可以同时查看多个索引信息：
-1GET test,test2/_settings
-结果如下：也可以查看所有索引信息：
-1GET _all/_s...
+                            term_vectors 是通过分词器产生的信息，包括：
+
+一组 terms
+每个 term 的位置
+term 的首字符&#x2F;尾字符与原始字符串原点的偏移量
+
+term_vectors 取值：
+
+    
+
                         
                     </div>
 
@@ -199,7 +203,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:48 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:15:23 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -227,7 +231,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-term_vectors/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -242,17 +246,15 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">
-                            更新索引
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">
+                            索引别名
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            索引创建好之后，可以修改其属性。
-修改索引的副本数例如修改索引的副本数：
-1234PUT book/_settings&#123;  &quot;number_of_replicas&quot;: 2&#125;
-修改索引的读写权限索引创建成功后，可...
+                            添加别名可以为索引创建别名，如果这个别名是唯一的，该别名可以代替索引名称。
+1234567891011POST /_aliases&#123;  &quot;actions&quot;: [    &#123;      &quot;add&quot...
                         
                     </div>
 
@@ -260,7 +262,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:57 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:10 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -288,7 +290,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9B%B4%E6%96%B0%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -366,15 +368,19 @@
                     
 
                     <h3 class="home-article-title">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">
-                            索引别名
+                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">
+                            查看索引
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            添加别名可以为索引创建别名，如果这个别名是唯一的，该别名可以代替索引名称。
-1234567891011POST /_aliases&#123;  &quot;actions&quot;: [    &#123;      &quot;add&quot...
+                            查看索引head 插件查看方式如下： 
+请求查看方式如下：1GET book/_settings
+结果如下：也可以同时查看多个索引信息：
+1GET test,test2/_settings
+结果如下：也可以查看所有索引信息：
+1GET _all/_s...
                         
                     </div>
 
@@ -382,7 +388,7 @@
     <div class="article-meta-info border-box">
         
             <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:14:10 GMT+0800">2023-08-06</span>
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Sun Aug 06 2023 23:13:48 GMT+0800">2023-08-06</span>
             </span>
         
 
@@ -410,7 +416,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E7%B4%A2%E5%BC%95%E5%88%AB%E5%90%8D/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%9F%A5%E7%9C%8B%E7%B4%A2%E5%BC%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
