@@ -358,66 +358,6 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">
-                            模糊查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            在实际搜索中，有时我们可能会打错字，从而导致搜索不到，在 match query 中，可以通过 fuzziness 属性实现模糊查询。
-fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？以LevenShtein 编辑距离为准。编辑距...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
                         <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">
                             范围查询
                         </a>
@@ -471,6 +411,66 @@ lte案例：
 
     
         <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">
+                            模糊查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            在实际搜索中，有时我们可能会打错字，从而导致搜索不到，在 match query 中，可以通过 fuzziness 属性实现模糊查询。
+fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？以LevenShtein 编辑距离为准。编辑距...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -605,6 +605,66 @@ lte案例：
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
+                            非空查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            exists query 会返回指定字段中至少有一个非空值的文档：
+12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
                         <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">
                             通配符查询
                         </a>
@@ -717,66 +777,6 @@ lte案例：
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
-                            非空查询
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            exists query 会返回指定字段中至少有一个非空值的文档：
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
