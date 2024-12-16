@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="Ancy">
+    
+    <title>
+        
+            映射参数-analyzer |
+        
+        Ancy Note
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="https://AncyXing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"example.com","root":"/","language":"zh-CN","path":"search.xml"}
+    KEEP.theme_config = {"toc":{"enable":true,"number":true,"expand_all":true,"init_open":true,"layout":"right"},"style":{"primary_color":"#0066cc","logo":"https://AncyXing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp","favicon":"https://AncyXing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp","avatar":"https://AncyXing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp","font_size":null,"font_family":null,"hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"header_transparent":false,"background_img":"/images/bg.svg","description":"everything is possible.","font_color":null,"hitokoto":false},"scroll":{"progress_bar":true,"percent":false}},"local_search":{"enable":true,"preload":true},"code_block":{"tools":{"enable":true,"style":"default"},"highlight_theme":"obsidian"},"pjax":{"enable":true},"lazyload":{"enable":true},"comment":{"enable":true,"use":"giscus","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.8"},"waline":{"server_url":null,"reaction":false,"version":2},"giscus":{"repo":"AncyXing/AncyXing.github.io","repo_id":"MDEwOlJlcG9zaXRvcnkxOTQzOTY0OTM=","category":"Announcements","category_id":"DIC_kwDOC5ZBTc4CYYD-","reactions_enabled":false}},"post":{"author_avatar":true,"author_label":{"enable":true,"auto":true,"custom_label_list":["Java工程师"]},"word_count":{"wordcount":true,"min2read":true},"datetime":{"create":true,"update":true,"format":"YYYY-MM-DD HH:mm:ss"},"img_align":"left","copyright_info":true},"website_count":{"busuanzi_count":{"enable":true,"site_uv":false,"site_pv":false,"page_pv":true}},"version":"3.8.6"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <i class="pjax-progress-icon fas fa-circle-notch fa-spin"></i>
+    
+</div>
+
+
+<main class="page-container border-box">
+
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="https://ancyxing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               Ancy Note
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/"
+                            >
+                                首页
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/archives"
+                            >
+                                归档
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/tags"
+                            >
+                                标签
+                            </a>
+                        </li>
+                    
+                        <li class="menu-item">
+                            <a class=""
+                               href="/categories"
+                            >
+                                分类
+                            </a>
+                        </li>
+                    
+                    
+                        <li class="menu-item search search-popup-trigger">
+                            <i class="fas fa-search"></i>
+                        </li>
+                    
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/">首页</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/archives">归档</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/tags">标签</a>
+                </li>
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class=""
+                       href="/categories">分类</a>
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+
+                
+
+                    <div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+
+        <div class="article-content-container border-box">
+
+            
+
+            <div class="article-content-bottom border-box">
+                
+                    <div class="article-title">
+                        映射参数-analyzer
+                    </div>
+                
+
+                
+                    <div class="article-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="https://ancyxing.github.io/picx-images-hosting/20241116/avator.1vyocovfed.webp">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author">
+                                <span class="name">Ancy</span>
+                                
+                                    <span class="author-label">Lv6</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="article-meta-info-container border-box post">
+    <div class="article-meta-info border-box">
+        
+
+
+        
+            <span class="meta-info-item article-create-date">
+                <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
+                <span class="pc">2023-08-06 19:20:00</span>
+                <span class="mobile">2023-08-06 19:20</span>
+            </span>
+
+            <span class="meta-info-item article-update-date">
+                <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                <span class="pc" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+            <span class="meta-info-item article-wordcount">
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>1.4k 字</span>
+            </span>
+        
+        
+            <span class="meta-info-item article-min2read">
+                <i class="icon fas fa-clock"></i>&nbsp;<span>8 分钟</span>
+            </span>
+        
+        
+            <span class="meta-info-item article-pv">
+                <i class="icon fas fa-eye"></i>&nbsp;<span id="busuanzi_value_page_pv"></span>
+            </span>
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="article-content keep-markdown-body">
+                    
+
+                    <h1 id="analyzer"><a href="#analyzer" class="headerlink" title="analyzer"></a>analyzer</h1><p>定义文本字段的分词器。默认对索引和查询都是有效的。</p>
+<blockquote>
+<p>什么叫对索引和查询都是有效的？</p>
+</blockquote>
+<p>假设不用分词器，我们先来看一下索引的结果，创建一个索引并添加一个文档：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PUT blog</span><br><span class="line"></span><br><span class="line">PUT blog/_doc/1</span><br><span class="line">&#123;</span><br><span class="line">  &quot;title&quot;:&quot;定义文本字段的分词器。默认对索引和查询都是有效的。&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>查看词条向量（term vectors）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET blog/_termvectors/1</span><br><span class="line">&#123;</span><br><span class="line">  &quot;fields&quot;: [&quot;title&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>查看结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;_index&quot; : &quot;blog&quot;,</span><br><span class="line">  &quot;_type&quot; : &quot;_doc&quot;,</span><br><span class="line">  &quot;_id&quot; : &quot;1&quot;,</span><br><span class="line">  &quot;_version&quot; : 1,</span><br><span class="line">  &quot;found&quot; : true,</span><br><span class="line">  &quot;took&quot; : 0,</span><br><span class="line">  &quot;term_vectors&quot; : &#123;</span><br><span class="line">    &quot;title&quot; : &#123;</span><br><span class="line">      &quot;field_statistics&quot; : &#123;</span><br><span class="line">        &quot;sum_doc_freq&quot; : 22,</span><br><span class="line">        &quot;doc_count&quot; : 1,</span><br><span class="line">        &quot;sum_ttf&quot; : 23</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;terms&quot; : &#123;</span><br><span class="line">        &quot;义&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 1,</span><br><span class="line">              &quot;start_offset&quot; : 1,</span><br><span class="line">              &quot;end_offset&quot; : 2</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;分&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 7,</span><br><span class="line">              &quot;start_offset&quot; : 7,</span><br><span class="line">              &quot;end_offset&quot; : 8</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;和&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 15,</span><br><span class="line">              &quot;start_offset&quot; : 16,</span><br><span class="line">              &quot;end_offset&quot; : 17</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;器&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 9,</span><br><span class="line">              &quot;start_offset&quot; : 9,</span><br><span class="line">              &quot;end_offset&quot; : 10</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;字&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 4,</span><br><span class="line">              &quot;start_offset&quot; : 4,</span><br><span class="line">              &quot;end_offset&quot; : 5</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;定&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 0,</span><br><span class="line">              &quot;start_offset&quot; : 0,</span><br><span class="line">              &quot;end_offset&quot; : 1</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;对&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 12,</span><br><span class="line">              &quot;start_offset&quot; : 13,</span><br><span class="line">              &quot;end_offset&quot; : 14</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;引&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 14,</span><br><span class="line">              &quot;start_offset&quot; : 15,</span><br><span class="line">              &quot;end_offset&quot; : 16</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;效&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 21,</span><br><span class="line">              &quot;start_offset&quot; : 22,</span><br><span class="line">              &quot;end_offset&quot; : 23</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;文&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 2,</span><br><span class="line">              &quot;start_offset&quot; : 2,</span><br><span class="line">              &quot;end_offset&quot; : 3</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;是&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 19,</span><br><span class="line">              &quot;start_offset&quot; : 20,</span><br><span class="line">              &quot;end_offset&quot; : 21</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;有&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 20,</span><br><span class="line">              &quot;start_offset&quot; : 21,</span><br><span class="line">              &quot;end_offset&quot; : 22</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;本&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 3,</span><br><span class="line">              &quot;start_offset&quot; : 3,</span><br><span class="line">              &quot;end_offset&quot; : 4</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;查&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 16,</span><br><span class="line">              &quot;start_offset&quot; : 17,</span><br><span class="line">              &quot;end_offset&quot; : 18</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;段&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 5,</span><br><span class="line">              &quot;start_offset&quot; : 5,</span><br><span class="line">              &quot;end_offset&quot; : 6</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;的&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 2,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 6,</span><br><span class="line">              &quot;start_offset&quot; : 6,</span><br><span class="line">              &quot;end_offset&quot; : 7</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 22,</span><br><span class="line">              &quot;start_offset&quot; : 23,</span><br><span class="line">              &quot;end_offset&quot; : 24</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;索&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 13,</span><br><span class="line">              &quot;start_offset&quot; : 14,</span><br><span class="line">              &quot;end_offset&quot; : 15</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;认&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 11,</span><br><span class="line">              &quot;start_offset&quot; : 12,</span><br><span class="line">              &quot;end_offset&quot; : 13</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;词&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 8,</span><br><span class="line">              &quot;start_offset&quot; : 8,</span><br><span class="line">              &quot;end_offset&quot; : 9</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;询&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 17,</span><br><span class="line">              &quot;start_offset&quot; : 18,</span><br><span class="line">              &quot;end_offset&quot; : 19</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;都&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 18,</span><br><span class="line">              &quot;start_offset&quot; : 19,</span><br><span class="line">              &quot;end_offset&quot; : 20</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;默&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 10,</span><br><span class="line">              &quot;start_offset&quot; : 11,</span><br><span class="line">              &quot;end_offset&quot; : 12</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>可以看到，默认情况下，中文就是一个字一个字的分，这种分词方式没有任何意义。如果这样分词，查询就只能按照一个字一个字来查，像下面这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET blog/_search</span><br><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;</span><br><span class="line">    &quot;term&quot;: &#123;</span><br><span class="line">      &quot;title&quot;: &quot;定&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>无意义！！！</p>
+<p>所以，我们要根据实际情况，配置合适的分词器。</p>
+<p>给字段设定分词器：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">PUT blog</span><br><span class="line">&#123;</span><br><span class="line">  &quot;mappings&quot;: &#123;</span><br><span class="line">    &quot;properties&quot;: &#123;</span><br><span class="line">      &quot;title&quot;:&#123;</span><br><span class="line">        &quot;type&quot;:&quot;text&quot;,</span><br><span class="line">        &quot;analyzer&quot;: &quot;ik_smart&quot;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>存储文档：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PUT blog/_doc/1</span><br><span class="line">&#123;</span><br><span class="line">  &quot;title&quot;:&quot;定义文本字段的分词器。默认对索引和查询都是有效的。&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>查看词条向量：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">GET blog/_termvectors/1</span><br><span class="line">&#123;</span><br><span class="line">  &quot;fields&quot;: [&quot;title&quot;]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>查询结果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  &quot;_index&quot; : &quot;blog&quot;,</span><br><span class="line">  &quot;_type&quot; : &quot;_doc&quot;,</span><br><span class="line">  &quot;_id&quot; : &quot;1&quot;,</span><br><span class="line">  &quot;_version&quot; : 1,</span><br><span class="line">  &quot;found&quot; : true,</span><br><span class="line">  &quot;took&quot; : 1,</span><br><span class="line">  &quot;term_vectors&quot; : &#123;</span><br><span class="line">    &quot;title&quot; : &#123;</span><br><span class="line">      &quot;field_statistics&quot; : &#123;</span><br><span class="line">        &quot;sum_doc_freq&quot; : 12,</span><br><span class="line">        &quot;doc_count&quot; : 1,</span><br><span class="line">        &quot;sum_ttf&quot; : 13</span><br><span class="line">      &#125;,</span><br><span class="line">      &quot;terms&quot; : &#123;</span><br><span class="line">        &quot;分词器&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 4,</span><br><span class="line">              &quot;start_offset&quot; : 7,</span><br><span class="line">              &quot;end_offset&quot; : 10</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;和&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 8,</span><br><span class="line">              &quot;start_offset&quot; : 16,</span><br><span class="line">              &quot;end_offset&quot; : 17</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;字段&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 2,</span><br><span class="line">              &quot;start_offset&quot; : 4,</span><br><span class="line">              &quot;end_offset&quot; : 6</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;定义&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 0,</span><br><span class="line">              &quot;start_offset&quot; : 0,</span><br><span class="line">              &quot;end_offset&quot; : 2</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;对&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 6,</span><br><span class="line">              &quot;start_offset&quot; : 13,</span><br><span class="line">              &quot;end_offset&quot; : 14</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;文本&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 1,</span><br><span class="line">              &quot;start_offset&quot; : 2,</span><br><span class="line">              &quot;end_offset&quot; : 4</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;有效&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 11,</span><br><span class="line">              &quot;start_offset&quot; : 21,</span><br><span class="line">              &quot;end_offset&quot; : 23</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;查询&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 9,</span><br><span class="line">              &quot;start_offset&quot; : 17,</span><br><span class="line">              &quot;end_offset&quot; : 19</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;的&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 2,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 3,</span><br><span class="line">              &quot;start_offset&quot; : 6,</span><br><span class="line">              &quot;end_offset&quot; : 7</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 12,</span><br><span class="line">              &quot;start_offset&quot; : 23,</span><br><span class="line">              &quot;end_offset&quot; : 24</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;索引&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 7,</span><br><span class="line">              &quot;start_offset&quot; : 14,</span><br><span class="line">              &quot;end_offset&quot; : 16</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;都是&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 10,</span><br><span class="line">              &quot;start_offset&quot; : 19,</span><br><span class="line">              &quot;end_offset&quot; : 21</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;,</span><br><span class="line">        &quot;默认&quot; : &#123;</span><br><span class="line">          &quot;term_freq&quot; : 1,</span><br><span class="line">          &quot;tokens&quot; : [</span><br><span class="line">            &#123;</span><br><span class="line">              &quot;position&quot; : 5,</span><br><span class="line">              &quot;start_offset&quot; : 11,</span><br><span class="line">              &quot;end_offset&quot; : 13</span><br><span class="line">            &#125;</span><br><span class="line">          ]</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>然后就可以通过词去搜索了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">GET blog/_search</span><br><span class="line">&#123;</span><br><span class="line">  &quot;query&quot;: &#123;</span><br><span class="line">    &quot;term&quot;: &#123;</span><br><span class="line">      &quot;title&quot;: &quot;索引&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+                </div>
+
+                
+                        
+<div class="article-copyright-info-container border-box">
+    <div class="copyright-info-content border-box">
+        <div class="copyright-info-top border-box">
+            <div class="post-title border-box text-ellipsis">
+                映射参数-analyzer
+            </div>
+
+            <div class="post-link border-box text-ellipsis">
+                2023/08/06/ES/学习笔记/映射参数-analyzer/
+            </div>
+        </div>
+
+        <div class="copyright-info-bottom border-box">
+            <div class="post-author bottom-item">
+                <div class="type">
+                    作者
+                </div>
+                <div class="content">Ancy</div>
+            </div>
+
+            <div class="post-time bottom-item">
+                <div class="type">
+                    发布于
+                </div>
+                <div class="content">2023-08-06 19:20</div>
+            </div>
+
+
+            <div class="post-license bottom-item">
+                <div class="type">
+                    许可
+                </div>
+                <div class="content tooltip" data-tooltip-content="CC BY-NC-SA 4.0">
+                    <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">
+                        <i class="fa-brands fa-creative-commons"></i>
+                        <i class="fa-brands fa-creative-commons-by"></i>
+                        <i class="fa-brands fa-creative-commons-nc"></i>
+                        <i class="fa-brands fa-creative-commons-sa"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <i class="copyright-bg fa-solid fa-copyright"></i>
+    </div>
+    <div class="copy-copyright-info flex-center tooltip" data-tooltip-content="复制版权信息" data-tooltip-offset-y="-2px">
+        <i class="fa-solid fa-copy"></i>
+    </div>
+</div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                            <ul class="post-tags-box border-box">
+                                
+                                    <li class="tag-item border-box">
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/es/">es</a>
+                                    </li>
+                                
+                            </ul>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="article-nav">
+                        
+                            <div class="article-prev">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%96%87%E6%A1%A3%E6%9B%B4%E6%96%B0/"
+                                   title="文档更新"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                      <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                            <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">文档更新</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="article-next">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%98%A0%E5%B0%84%E5%8F%82%E6%95%B0-boost/"
+                                   title="映射参数-boost"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">映射参数-boost</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                            <span class="right arrow-icon flex-center">
+                                      <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+    <div class="comments-container border-box">
+        <div id="comments-anchor" class="comment-area-title border-box">
+            <i class="fas fa-comments"></i>&nbsp;评论
+        </div>
+        
+            
+
+    <div class="giscus-comments-container">
+        <div class="giscus" id="giscus"></div>
+        <script data-pjax>
+
+          if (!window?.__getGiscusTheme) {
+            window.__getGiscusTheme = () => {
+              return document.body.classList.contains("dark-mode") ? "dark_dimmed" : "light_tritanopia";
+            };
+          }
+
+          if (!window?.__changeGiscusTheme) {
+            window.__changeGiscusTheme = () => {
+              const iframe = document.querySelector("iframe.giscus-frame");
+              iframe && iframe.contentWindow.postMessage({
+                giscus: {
+                  setConfig: {
+                    theme: __getGiscusTheme()
+                  }
+                }
+              }, "https://giscus.app");
+            };
+          }
+
+          if (!window?.__loadGiscus) {
+            window.__loadGiscus = () => {
+              const script = document.createElement("script");
+              script.async = true;
+              script.src = "https://giscus.app/client.js";
+              script.setAttribute("data-repo", 'AncyXing/AncyXing.github.io');
+              script.setAttribute("data-repo-id", 'MDEwOlJlcG9zaXRvcnkxOTQzOTY0OTM=');
+              script.setAttribute("data-category", 'Announcements');
+              script.setAttribute("data-category-id", 'DIC_kwDOC5ZBTc4CYYD-');
+              script.setAttribute("data-reactions-enabled", '0');
+              script.setAttribute("data-lang", 'zh-CN');
+              script.setAttribute("data-mapping", "pathname");
+              script.setAttribute("data-strict", "0");
+              script.setAttribute("data-emit-metadata", "0");
+              script.setAttribute("data-input-position", "top");
+              script.setAttribute("crossorigin", "anonymous");
+              script.setAttribute("loading", "lazy");
+              script.setAttribute("data-theme", __getGiscusTheme());
+              document.querySelector(".giscus-comments-container").appendChild(script);
+
+              const toggleThemeBtn = document.querySelector(".tool-dark-light-toggle");
+              toggleThemeBtn && toggleThemeBtn.addEventListener("click", () => {
+                __changeGiscusTheme();
+              });
+            }
+          }
+
+          if ('true' === "true") {
+            setTimeout(() => {
+              __loadGiscus();
+            }, 1000);
+          } else {
+            window.addEventListener("DOMContentLoaded", () => {
+              setTimeout(() => {
+                __loadGiscus();
+              }, 1000);
+            });
+          }
+        </script>
+    </div>
+
+
+        
+    </div>
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+            <div class="pc-post-toc right-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#analyzer"><span class="nav-number">1.</span> <span class="nav-text">analyzer</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="border-box website-info-box default">
+        
+            <div class="copyright-info info-item default">
+                &copy;&nbsp;2024
+                
+                    &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">Ancy</a>
+                
+            </div>
+
+            <div class="theme-info info-item default">
+                由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+            </div>
+
+            
+
+            
+                <div class="deploy-info info-item default">
+                    
+                        本站由 <span class="tooltip" data-tooltip-content="GitHub Pages"><img src="/images/deploy-provider/github.png"></span> 提供部署服务
+                        
+                </div>
+            
+        
+
+        <div class="count-item info-item default">
+            
+
+            
+
+            
+        </div>
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="tools-list border-box">
+        <!-- PC TOC show toggle -->
+        
+            <li class="tools-item flex-center toggle-show-toc">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        <!-- PC go comment -->
+        
+            <li class="tools-item flex-center go-to-comments">
+                <i class="fas fa-comment"></i>
+                <span class="post-comments-count"></span>
+            </li>
+        
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+            <li class="tools-item toggle-show-toc-tablet flex-center">
+                <i class="fas fa-list"></i>
+            </li>
+        
+
+        
+            <li class="tools-item go-to-comments-tablet flex-center">
+                <i class="fas fa-comment"></i>
+            </li>
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="搜索..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="close-popup-btn">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- tablet toc -->
+    
+        <div class="tablet-post-toc-mask">
+            <div class="tablet-post-toc">
+                <div class="post-toc-wrap border-box">
+    <div class="post-toc border-box">
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#analyzer"><span class="nav-number">1.</span> <span class="nav-text">analyzer</span></a></li></ol>
+    </div>
+</div>
+
+            </div>
+        </div>
+    
+</main>
+
+
+
+<!-- common -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local-search -->
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+<!-- code-block -->
+
+    
+<script src="/js/code-block.js"></script>
+
+
+
+<!-- lazyload -->
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="pjax">
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+            
+<script src="/js/post/toc.js"></script>
+
+        
+
+        <!-- copyright-info -->
+        
+            
+<script src="/js/post/copyright-info.js"></script>
+
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- category-page -->
+    
+
+    <!-- links-page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart()
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd()
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'))
+            KEEP.initExecute()
+        });
+    });
+</script>
+
+
+
+
+</body>
+</html>
