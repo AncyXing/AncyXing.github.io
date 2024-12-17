@@ -9,7 +9,7 @@
     
     <title>
         
-            二叉树.md |
+            快速排序.md |
         
         Ancy Note
     </title>
@@ -182,7 +182,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        二叉树.md
+                        快速排序.md
                     </div>
                 
 
@@ -211,13 +211,13 @@
         
             <span class="meta-info-item article-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-12-05 00:00:00</span>
-                <span class="mobile">2024-12-05 00:00</span>
+                <span class="pc">2024-12-17 23:24:00</span>
+                <span class="mobile">2024-12-17 23:24</span>
             </span>
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+                <span class="pc" data-updated="Tue Dec 17 2024 23:28:30 GMT+0800">2024-12-17 23:28:30</span>
             </span>
         
 
@@ -238,12 +238,12 @@
         
         
             <span class="meta-info-item article-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>322 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>492 字</span>
             </span>
         
         
             <span class="meta-info-item article-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
             </span>
         
         
@@ -264,25 +264,19 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h2 id="常见术语"><a href="#常见术语" class="headerlink" title="常见术语"></a>常见术语</h2><ol>
-<li>边：连接两个节点的线段</li>
-<li>节点所在层：从顶至底递增，根节点所在层为1</li>
-<li>节点的度：节点的子节点数量，二叉树中的取值范围是0、1、2</li>
-<li>节点的深度：从根节点到该节点所经过的边的数量 </li>
-<li>二叉树的高度：从根节点到最远叶子节点所经过的边的数量</li>
-<li>节点的高度：从距离该节点最远的叶节点到该节点所经过的边的数量</li>
+                    <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>是一种基于分治策略的排序算法，选择数组中的某个元素作为<strong>基准数</strong>，将所有小于基准数的元素移到其左侧，而大于基准数的元素移到其右侧，直到数组长度为1时结束。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">quickSort</span><span class="params">(<span class="type">int</span>[] array, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="comment">// 子数组长度为 1 时终止递归</span></span><br><span class="line">        <span class="keyword">if</span> (left &gt;= right)</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        <span class="comment">// 哨兵划分</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">pivot</span> <span class="operator">=</span> partition(array, left, right);</span><br><span class="line">        <span class="comment">// 递归左子数组、右子数组</span></span><br><span class="line">        quickSort(array, left, pivot - <span class="number">1</span>);</span><br><span class="line">        quickSort(array, pivot + <span class="number">1</span>, right);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">partition</span><span class="params">(<span class="type">int</span>[] array, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">        <span class="comment">// 设置基准元素</span></span><br><span class="line">        <span class="type">int</span> <span class="variable">base</span> <span class="operator">=</span> array[left];</span><br><span class="line">        <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left;</span><br><span class="line">        <span class="type">int</span> <span class="variable">j</span> <span class="operator">=</span> right;</span><br><span class="line">        <span class="keyword">while</span> (i &lt; j) &#123;</span><br><span class="line">            <span class="comment">// 先从右至左，寻找比标准元素小的，没找到移动j</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j &amp;&amp; array[j] &gt;= base) &#123;</span><br><span class="line">                j--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 先从左至右，寻找比标准元素大的，没找到移动i</span></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j &amp;&amp; array[i] &lt;= base) &#123;</span><br><span class="line">                i++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 交换i，j位置上的元素</span></span><br><span class="line">            swap(array, i, j);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 交换base与left</span></span><br><span class="line">        swap(array, i, left);</span><br><span class="line">        <span class="comment">// 此时的i为分界线</span></span><br><span class="line">        <span class="keyword">return</span> i;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>选取数组最左端元素作为基准数，初始化两个指针 i 和 j 分别指向数组的两端。</li>
+<li>设置一个循环，在每轮中使用 i（j）分别寻找第一个比基准数大（小）的元素，然后交换这两个元素。</li>
+<li>循环执行步骤 2.，直到 i 和 j 相遇时停止，最后将基准数交换至两个子数组的分界线。</li>
 </ol>
-<h2 id="常见二叉树的类型"><a href="#常见二叉树的类型" class="headerlink" title="常见二叉树的类型"></a>常见二叉树的类型</h2><h3 id="完美二叉树"><a href="#完美二叉树" class="headerlink" title="完美二叉树"></a>完美二叉树</h3><p>也称为满二叉树，叶节点的度为0，其余节点的度为2，若树的高度为h，则节点总数为2^(h+1) -1</p>
-<h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><p>只有最底层的节点没有被填满，且底层节点尽量靠左填充，完美二叉树也是一个完全二叉树</p>
-<h3 id="完满二叉树"><a href="#完满二叉树" class="headerlink" title="完满二叉树"></a>完满二叉树</h3><p>除了叶子节点的度为0，其余节点的度为2，且叶子节点不需要写靠左填充</p>
-<h3 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h3><p>任意节点的左子树与右子树的高度之差的绝对值不超过1</p>
-<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>当只有左子树或只有右子树时，二叉树会形似成链表</p>
-<h2 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h2><p><img  
-                     lazyload
-                     alt="image"
-                     data-src="https://ancyxing.github.io/picx-images-hosting/20241206/image.3yehssafgp.webp"
-                      alt="img.png"
-                ></p>
+<ul>
+<li>时间复杂度为O(nlog(n))，完全逆序时为O(n^2)</li>
+<li>空间复杂度为O(n)，原地排序</li>
+<li>不稳定排序，在哨兵划分的最后一步，基准数可能会被交换至相等元素的右侧</li>
+</ul>
+<p>每轮哨兵划分操作都将长度为n 的数组划分为长度为0 和n-1 的两个子数组，此时递归层数达到n ，每层中的循环数为n ，总体使用O(n^2)<br>时间。</p>
 
                 </div>
 
@@ -292,11 +286,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="post-title border-box text-ellipsis">
-                二叉树.md
+                快速排序.md
             </div>
 
             <div class="post-link border-box text-ellipsis">
-                2024/12/05/算法/二叉树/
+                2024/12/17/算法/排序/快速排序/
             </div>
         </div>
 
@@ -312,7 +306,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-12-05 00:00</div>
+                <div class="content">2024-12-17 23:24</div>
             </div>
 
 
@@ -362,31 +356,15 @@
                 
                     <div class="article-nav">
                         
-                            <div class="article-prev">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"
-                                   title="二叉树的遍历.md"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                      <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                            <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">二叉树的遍历.md</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="article-next">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/"
-                                   title="cpu过高如何排查.md"
+                                   href="/2024/12/17/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F/"
+                                   title="冒泡排序.md"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">cpu过高如何排查.md</span>
+                                        <span class="post-nav-title-item text-ellipsis">冒泡排序.md</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
@@ -489,7 +467,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">常见术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">常见二叉树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.1.</span> <span class="nav-text">完美二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.2.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.3.</span> <span class="nav-text">完满二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">2.5.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">计算公式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol>
     </div>
 </div>
 
@@ -663,7 +641,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">常见术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">常见二叉树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.1.</span> <span class="nav-text">完美二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.2.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.3.</span> <span class="nav-text">完满二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">2.5.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">计算公式</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol>
     </div>
 </div>
 

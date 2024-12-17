@@ -9,7 +9,7 @@
     
     <title>
         
-            二叉树的遍历.md |
+            二叉树.md |
         
         Ancy Note
     </title>
@@ -182,7 +182,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        二叉树的遍历.md
+                        二叉树.md
                     </div>
                 
 
@@ -211,8 +211,8 @@
         
             <span class="meta-info-item article-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2024-12-06 00:00:00</span>
-                <span class="mobile">2024-12-06 00:00</span>
+                <span class="pc">2024-12-05 00:00:00</span>
+                <span class="mobile">2024-12-05 00:00</span>
             </span>
 
             <span class="meta-info-item article-update-date">
@@ -238,12 +238,12 @@
         
         
             <span class="meta-info-item article-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>620 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>322 字</span>
             </span>
         
         
             <span class="meta-info-item article-min2read">
-                <i class="icon fas fa-clock"></i>&nbsp;<span>2 分钟</span>
+                <i class="icon fas fa-clock"></i>&nbsp;<span>1 分钟</span>
             </span>
         
         
@@ -264,20 +264,25 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h2 id="二叉树的遍历方式"><a href="#二叉树的遍历方式" class="headerlink" title="二叉树的遍历方式"></a>二叉树的遍历方式</h2><h2 id="层序遍历"><a href="#层序遍历" class="headerlink" title="层序遍历"></a>层序遍历</h2><p>从顶部到底部逐层遍历二叉树，并在每一层按照从左到右的顺序访问节点，属于<strong>广度优先遍历</strong>。</p>
-<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>基于队列进行实现，逐层推进与先进先出的思想相符</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 层序遍历 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> List&lt;Integer&gt; <span class="title function_">levelOrder</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="comment">// 初始化队列，加入根节点</span></span><br><span class="line">    Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> <span class="title class_">LinkedList</span>&lt;&gt;();</span><br><span class="line">    queue.add(root);</span><br><span class="line">    <span class="comment">// 初始化一个列表，用于保存遍历序列</span></span><br><span class="line">    List&lt;Integer&gt; list = <span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">node</span> <span class="operator">=</span> queue.poll(); <span class="comment">// 队列出队</span></span><br><span class="line">        list.add(node.val);           <span class="comment">// 保存节点值</span></span><br><span class="line">        <span class="comment">// 先左再右</span></span><br><span class="line">        <span class="keyword">if</span> (node.left != <span class="literal">null</span>)</span><br><span class="line">            queue.offer(node.left);   <span class="comment">// 左子节点入队</span></span><br><span class="line">        <span class="keyword">if</span> (node.right != <span class="literal">null</span>)</span><br><span class="line">            queue.offer(node.right);  <span class="comment">// 右子节点入队</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> list;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度为O(n)，每个节点遍历一次</p>
-<p>空间复杂度为O(n)，节点总数为n的满二叉树，最底层的叶节点数量为(n+1)&#x2F;2，遍历到最底层之前，队列中最多同时存在(n+1)&#x2F;2<br>个节点</p>
-<h2 id="前序、中序、后续遍历"><a href="#前序、中序、后续遍历" class="headerlink" title="前序、中序、后续遍历"></a>前序、中序、后续遍历</h2><p>属于<strong>深度优先遍历</strong>，先走到头，再回溯继续的遍历方式，深度优先遍历就像是绕着整棵二叉树的外围“走”一圈</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 递归实现</span></span><br><span class="line"><span class="comment"> * 前序遍历</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">preOrder</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 访问优先级：根节点 -&gt; 左子树 -&gt; 右子树</span></span><br><span class="line">    list.add(root.val);</span><br><span class="line">    preOrder(root.left);</span><br><span class="line">    preOrder(root.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 前序遍历，使用栈实现</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> root</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">preOrder2</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="comment">// 创建栈,加入根节点</span></span><br><span class="line">    Stack&lt;TreeNode&gt; stack = <span class="keyword">new</span> <span class="title class_">Stack</span>&lt;&gt;();</span><br><span class="line">    stack.push(root);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!stack.isEmpty()) &#123;</span><br><span class="line">        <span class="type">TreeNode</span> <span class="variable">pop</span> <span class="operator">=</span> stack.pop();</span><br><span class="line">        System.out.println(pop.val);</span><br><span class="line">        <span class="keyword">if</span> (pop.right != <span class="literal">null</span>) &#123;</span><br><span class="line">            stack.push(pop.right);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (pop.left != <span class="literal">null</span>) &#123;</span><br><span class="line">            stack.push(pop.left);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 中序遍历 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">inOrder</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 访问优先级：左子树 -&gt; 根节点 -&gt; 右子树</span></span><br><span class="line">    inOrder(root.left);</span><br><span class="line">    list.add(root.val);</span><br><span class="line">    inOrder(root.right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 后序遍历 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">postOrder</span><span class="params">(TreeNode root)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (root == <span class="literal">null</span>)</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    <span class="comment">// 访问优先级：左子树 -&gt; 右子树 -&gt; 根节点</span></span><br><span class="line">    postOrder(root.left);</span><br><span class="line">    postOrder(root.right);</span><br><span class="line">    list.add(root.val);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>时间复杂度为O(n)，每个节点遍历一次</p>
-<p>空间复杂度为O(n)，在最差情况下，即树退化为链表时，递归深度达到 ，系统占用O(n)栈帧</p>
-<h2 id="递归的一些感悟"><a href="#递归的一些感悟" class="headerlink" title="递归的一些感悟"></a>递归的一些感悟</h2><ol>
-<li>定义一套处理流程和结束条件，每一个人都得遵守</li>
-<li>包含递进和回溯两个过程</li>
-<li>剩下的交给计算机</li>
+                    <h2 id="常见术语"><a href="#常见术语" class="headerlink" title="常见术语"></a>常见术语</h2><ol>
+<li>边：连接两个节点的线段</li>
+<li>节点所在层：从顶至底递增，根节点所在层为1</li>
+<li>节点的度：节点的子节点数量，二叉树中的取值范围是0、1、2</li>
+<li>节点的深度：从根节点到该节点所经过的边的数量 </li>
+<li>二叉树的高度：从根节点到最远叶子节点所经过的边的数量</li>
+<li>节点的高度：从距离该节点最远的叶节点到该节点所经过的边的数量</li>
 </ol>
+<h2 id="常见二叉树的类型"><a href="#常见二叉树的类型" class="headerlink" title="常见二叉树的类型"></a>常见二叉树的类型</h2><h3 id="完美二叉树"><a href="#完美二叉树" class="headerlink" title="完美二叉树"></a>完美二叉树</h3><p>也称为满二叉树，叶节点的度为0，其余节点的度为2，若树的高度为h，则节点总数为2^(h+1) -1</p>
+<h3 id="完全二叉树"><a href="#完全二叉树" class="headerlink" title="完全二叉树"></a>完全二叉树</h3><p>只有最底层的节点没有被填满，且底层节点尽量靠左填充，完美二叉树也是一个完全二叉树</p>
+<h3 id="完满二叉树"><a href="#完满二叉树" class="headerlink" title="完满二叉树"></a>完满二叉树</h3><p>除了叶子节点的度为0，其余节点的度为2，且叶子节点不需要写靠左填充</p>
+<h3 id="平衡二叉树"><a href="#平衡二叉树" class="headerlink" title="平衡二叉树"></a>平衡二叉树</h3><p>任意节点的左子树与右子树的高度之差的绝对值不超过1</p>
+<h3 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h3><p>当只有左子树或只有右子树时，二叉树会形似成链表</p>
+<h2 id="计算公式"><a href="#计算公式" class="headerlink" title="计算公式"></a>计算公式</h2><p><img  
+                     lazyload
+                     alt="image"
+                     data-src="https://ancyxing.github.io/picx-images-hosting/20241206/image.3yehssafgp.webp"
+                      alt="img.png"
+                ></p>
 
                 </div>
 
@@ -287,11 +292,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="post-title border-box text-ellipsis">
-                二叉树的遍历.md
+                二叉树.md
             </div>
 
             <div class="post-link border-box text-ellipsis">
-                2024/12/06/算法/二叉树的遍历/
+                2024/12/05/算法/二叉树/二叉树/
             </div>
         </div>
 
@@ -307,7 +312,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2024-12-06 00:00</div>
+                <div class="content">2024-12-05 00:00</div>
             </div>
 
 
@@ -360,14 +365,14 @@
                             <div class="article-prev">
                                 <a class="prev"
                                    rel="prev"
-                                   href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E8%A1%A8%E7%A4%BA%E6%96%B9%E5%BC%8F/"
-                                   title="二叉树的表示方式.md"
+                                   href="/2024/12/06/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/"
+                                   title="二叉树的遍历.md"
                                 >
                                     <span class="left arrow-icon flex-center">
                                       <i class="fas fa-chevron-left"></i>
                                     </span>
                                             <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">二叉树的表示方式.md</span>
+                                        <span class="post-nav-title-item text-ellipsis">二叉树的遍历.md</span>
                                         <span class="post-nav-item">上一篇</span>
                                     </span>
                                 </a>
@@ -377,11 +382,11 @@
                             <div class="article-next">
                                 <a class="next"
                                    rel="next"
-                                   href="/2024/12/05/%E7%AE%97%E6%B3%95/%E4%BA%8C%E5%8F%89%E6%A0%91/"
-                                   title="二叉树.md"
+                                   href="/2024/12/03/Java%E5%9F%BA%E7%A1%80/%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5/cpu%E8%BF%87%E9%AB%98%E5%A6%82%E4%BD%95%E6%8E%92%E6%9F%A5/"
+                                   title="cpu过高如何排查.md"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">二叉树.md</span>
+                                        <span class="post-nav-title-item text-ellipsis">cpu过高如何排查.md</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
@@ -484,7 +489,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">二叉树的遍历方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="nav-number">2.</span> <span class="nav-text">层序遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.1.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E3%80%81%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86"><span class="nav-number">3.</span> <span class="nav-text">前序、中序、后续遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%9F%E6%82%9F"><span class="nav-number">4.</span> <span class="nav-text">递归的一些感悟</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">常见术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">常见二叉树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.1.</span> <span class="nav-text">完美二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.2.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.3.</span> <span class="nav-text">完满二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">2.5.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">计算公式</span></a></li></ol>
     </div>
 </div>
 
@@ -658,7 +663,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E5%BC%8F"><span class="nav-number">1.</span> <span class="nav-text">二叉树的遍历方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B1%82%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="nav-number">2.</span> <span class="nav-text">层序遍历</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.1.</span> <span class="nav-text">实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E5%BA%8F%E3%80%81%E4%B8%AD%E5%BA%8F%E3%80%81%E5%90%8E%E7%BB%AD%E9%81%8D%E5%8E%86"><span class="nav-number">3.</span> <span class="nav-text">前序、中序、后续遍历</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%92%E5%BD%92%E7%9A%84%E4%B8%80%E4%BA%9B%E6%84%9F%E6%82%9F"><span class="nav-number">4.</span> <span class="nav-text">递归的一些感悟</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E6%9C%AF%E8%AF%AD"><span class="nav-number">1.</span> <span class="nav-text">常见术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">2.</span> <span class="nav-text">常见二叉树的类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E7%BE%8E%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.1.</span> <span class="nav-text">完美二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E5%85%A8%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.2.</span> <span class="nav-text">完全二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%8C%E6%BB%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.3.</span> <span class="nav-text">完满二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91"><span class="nav-number">2.4.</span> <span class="nav-text">平衡二叉树</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%93%BE%E8%A1%A8"><span class="nav-number">2.5.</span> <span class="nav-text">链表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E5%85%AC%E5%BC%8F"><span class="nav-number">3.</span> <span class="nav-text">计算公式</span></a></li></ol>
     </div>
 </div>
 
