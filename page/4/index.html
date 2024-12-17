@@ -429,18 +429,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/09/07/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">
-                            版本号的分配规则
+                        <a href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">
+                            linux往文件追加和覆盖内容
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            版本号的分配规则版本号的分配规则
-版本控制策略规定了软件版本号的分配规则，因此指定该策略时应当尽量简单易懂。比如在用x.y.z格式进行版本管理时的规则如下所示：
-
-x在重大功能变更或新版本不向下兼容时加1，此时y与z的数字归0
-y在添加新功能或者删除...
+                            12345&gt;&gt; 是追加内容&gt; 是覆盖原有内容&lt; 是默认从键盘获得的输入，改成从文件，或者其它打开文件以及设备输入
+大于号：将一条命令执行结果（标准输出，或者错误输出，本来都要打印到屏幕上面的）重定向其它输出设备（文件，打开文件...
                         
                     </div>
 
@@ -464,7 +461,7 @@ y在添加新功能或者删除...
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
                         
                     
                 </ul>
@@ -478,7 +475,7 @@ y在添加新功能或者删除...
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/git/%E7%89%88%E6%9C%AC%E5%8F%B7%E7%9A%84%E5%88%86%E9%85%8D%E8%A7%84%E5%88%99/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -551,19 +548,20 @@ y在添加新功能或者删除...
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">
-                            linux的链接
+                        <a href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">
+                            安装vim
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            
-建立软链接ln -s 源文件 目标文件
-查看建立的软连接ls -il
-删除链接rm -rf 目标文件
+                            1.查看是否安装
+1rpm -qa|grep vim
+正确安装会返回3条结果
+2.如果少了其中的某一条,比如 vim-enhanced的就用命令来安装:
+1yum -y install vim-enhanced 
 
-
+3.如果上面的三条都沒有返回, 可...
                         
                     </div>
 
@@ -601,67 +599,7 @@ y在添加新功能或者删除...
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E7%9A%84%E9%93%BE%E6%8E%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">
-                            linux往文件追加和覆盖内容
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            12345&gt;&gt; 是追加内容&gt; 是覆盖原有内容&lt; 是默认从键盘获得的输入，改成从文件，或者其它打开文件以及设备输入
-大于号：将一条命令执行结果（标准输出，或者错误输出，本来都要打印到屏幕上面的）重定向其它输出设备（文件，打开文件...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/09/07/linux/linux%E5%BE%80%E6%96%87%E4%BB%B6%E8%BF%BD%E5%8A%A0%E5%92%8C%E8%A6%86%E7%9B%96%E5%86%85%E5%AE%B9/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -735,20 +673,23 @@ y在添加新功能或者删除...
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">
-                            安装vim
+                        <a href="/2023/09/07/linux/%E6%89%BE%E5%87%BACPU%E5%8D%A0%E7%94%A8%E6%9C%80%E9%AB%98%E7%9A%84%E7%BA%BF%E7%A8%8B/">
+                            找出CPU占用最高的线程
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            1.查看是否安装
-1rpm -qa|grep vim
-正确安装会返回3条结果
-2.如果少了其中的某一条,比如 vim-enhanced的就用命令来安装:
-1yum -y install vim-enhanced 
+                            1.找到进程pid
+1jps或者使用ps
+2.找出该进程内最耗费CPU的线程
+1top -Hp pid
+3.将线程ID转化为16进制
+1printf &quot;%x\n&quot;  线程ID
+4.jstack输出进程的堆栈信息
+注意：
 
-3.如果上面的三条都沒有返回, 可...
+死锁，D...
                         
                     </div>
 
@@ -786,7 +727,67 @@ y在添加新功能或者删除...
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/07/linux/%E5%AE%89%E8%A3%85vim/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/07/linux/%E6%89%BE%E5%87%BACPU%E5%8D%A0%E7%94%A8%E6%9C%80%E9%AB%98%E7%9A%84%E7%BA%BF%E7%A8%8B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">
+                            虚拟机重启后网络不可用
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            使用service network restart命令报错,原因和 NetworkManager 服务有冲突，这个好解决，直接关闭 NetworkManger 服务就好了
+解决方法123service NetworkManager stop## 并且...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/linux/">linux</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/09/07/linux/%E8%99%9A%E6%8B%9F%E6%9C%BA%E9%87%8D%E5%90%AF%E5%90%8E%E7%BD%91%E7%BB%9C%E4%B8%8D%E5%8F%AF%E7%94%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
