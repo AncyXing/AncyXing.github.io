@@ -9,7 +9,7 @@
     
     <title>
         
-            elasticsearch添加字段 |
+            归并排序 |
         
         Ancy Note
     </title>
@@ -182,7 +182,7 @@
             <div class="article-content-bottom border-box">
                 
                     <div class="article-title">
-                        elasticsearch添加字段
+                        归并排序
                     </div>
                 
 
@@ -211,13 +211,13 @@
         
             <span class="meta-info-item article-create-date">
                 <i class="icon fa-solid fa-calendar-check"></i>&nbsp;
-                <span class="pc">2023-08-06 19:20:00</span>
-                <span class="mobile">2023-08-06 19:20</span>
+                <span class="pc">2024-12-18 10:02:00</span>
+                <span class="mobile">2024-12-18 10:02</span>
             </span>
 
             <span class="meta-info-item article-update-date">
                 <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                <span class="pc" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+                <span class="pc" data-updated="Wed Dec 18 2024 10:27:38 GMT+0800">2024-12-18 10:27:38</span>
             </span>
         
 
@@ -228,7 +228,7 @@
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E7%AE%97%E6%B3%95/">算法</a></li>
                         
                     
                 </ul>
@@ -238,7 +238,7 @@
         
         
             <span class="meta-info-item article-wordcount">
-                <i class="icon fas fa-file-word"></i>&nbsp;<span>183 字</span>
+                <i class="icon fas fa-file-word"></i>&nbsp;<span>416 字</span>
             </span>
         
         
@@ -264,12 +264,14 @@
                 <div class="article-content keep-markdown-body">
                     
 
-                    <h2 id="elasticsearch添加字段（es7后推荐）"><a href="#elasticsearch添加字段（es7后推荐）" class="headerlink" title="elasticsearch添加字段（es7后推荐）"></a>elasticsearch添加字段（es7后推荐）</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">PUT /索引名/_mapping</span><br><span class="line">&#123;</span><br><span class="line">  &quot;properties&quot;: &#123;</span><br><span class="line">    &quot;字段1&quot;: &#123;</span><br><span class="line">      &quot;type&quot;: &quot;float&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;字段2&quot;: &#123;</span><br><span class="line">      &quot;type&quot;: &quot;keyword&quot;</span><br><span class="line">    &#125;,</span><br><span class="line">    &quot;字段3&quot;: &#123;</span><br><span class="line">      &quot;type&quot;: &quot;text&quot;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="Elasticsearch-Mapping增加一个新字段"><a href="#Elasticsearch-Mapping增加一个新字段" class="headerlink" title="Elasticsearch Mapping增加一个新字段"></a>Elasticsearch Mapping增加一个新字段</h2><p>在已经存有大量数据的ES索引中，向一个type中添加一个新字段。<br>说明，uploadusagestats是index，usagestats是type</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">PUT http://host/uploadusagestats/_mapping/usagestats</span><br><span class="line">&#123;</span><br><span class="line">    &quot;properties&quot;:&#123;</span><br><span class="line">       &quot;last_time_used&quot;:&#123;</span><br><span class="line">            &quot;type&quot; : &quot;date&quot;, </span><br><span class="line">            &quot;format&quot;: &quot;yyyy-MM-dd HH:mm:ss||yyyy-MM-dd||epoch_millis&quot;</span><br><span class="line">       &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="note"><a href="#note" class="headerlink" title="note"></a>note</h2><blockquote>
-<p>Before 7.0.0, the mappings definition used to include a type name. Although specifying types in requests is now deprecated, a type can still be provided if the request parameter include_type_name is set. For more details, please see Removal of mapping types.</p>
-</blockquote>
+                    <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>使用分治的思想，将原数组分成两个子部分，再对子部分进行划分，直到元素个数为1时划分结束，开始合并</p>
+<h2 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">mergeSort</span><span class="params">(<span class="type">int</span>[] arr, <span class="type">int</span> left, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 当子数组长度为 1 时终止递归</span></span><br><span class="line">    <span class="keyword">if</span> (left &gt;= right) <span class="keyword">return</span>;</span><br><span class="line">    <span class="type">int</span> <span class="variable">mid</span> <span class="operator">=</span> left + (right - left) / <span class="number">2</span>;</span><br><span class="line">    <span class="comment">// 递归左数组</span></span><br><span class="line">    mergeSort(arr, left, mid);</span><br><span class="line">    <span class="comment">// 递归右数组</span></span><br><span class="line">    mergeSort(arr, mid + <span class="number">1</span>, right);</span><br><span class="line">    merge(arr, left, mid, right);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">merge</span><span class="params">(<span class="type">int</span>[] nums, <span class="type">int</span> left, <span class="type">int</span> mid, <span class="type">int</span> right)</span> &#123;</span><br><span class="line">    <span class="comment">// 左子数组区间为 [left, mid], 右子数组区间为 [mid+1, right]</span></span><br><span class="line">    <span class="comment">// 创建一个临时数组 tmp ，用于存放合并后的结果</span></span><br><span class="line">    <span class="type">int</span>[] tmp = <span class="keyword">new</span> <span class="title class_">int</span>[right - left + <span class="number">1</span>];</span><br><span class="line">    <span class="comment">// 初始化左子数组和右子数组的起始索引</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> left, j = mid + <span class="number">1</span>, k = <span class="number">0</span>;</span><br><span class="line">    <span class="comment">// 当左右子数组都还有元素时，进行比较并将较小的元素复制到临时数组中</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid &amp;&amp; j &lt;= right) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] &lt;= nums[j])</span><br><span class="line">            tmp[k++] = nums[i++];</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            tmp[k++] = nums[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将左子数组和右子数组的剩余元素复制到临时数组中</span></span><br><span class="line">    <span class="keyword">while</span> (i &lt;= mid) &#123;</span><br><span class="line">        tmp[k++] = nums[i++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (j &lt;= right) &#123;</span><br><span class="line">        tmp[k++] = nums[j++];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 将临时数组 tmp 中的元素复制回原数组 nums 的对应区间</span></span><br><span class="line">    <span class="keyword">for</span> (k = <span class="number">0</span>; k &lt; tmp.length; k++) &#123;</span><br><span class="line">        nums[left + k] = tmp[k];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>时间复杂度为O(nlog(n))，划分产生高度为log(n)的递归数，每层合并的总操作数为n</li>
+<li>空间复杂度为O(n)，非原地排序，递归深度为log(n)，辅助数组使用O(n)的空间</li>
+<li>稳定排序，在合并过程中，相等元素的次序保持不变</li>
+</ul>
 
                 </div>
 
@@ -279,11 +281,11 @@
     <div class="copyright-info-content border-box">
         <div class="copyright-info-top border-box">
             <div class="post-title border-box text-ellipsis">
-                elasticsearch添加字段
+                归并排序
             </div>
 
             <div class="post-link border-box text-ellipsis">
-                2023/08/06/ES/elasticsearch添加字段/
+                2024/12/18/算法/排序/归并排序/
             </div>
         </div>
 
@@ -299,7 +301,7 @@
                 <div class="type">
                     发布于
                 </div>
-                <div class="content">2023-08-06 19:20</div>
+                <div class="content">2024-12-18 10:02</div>
             </div>
 
 
@@ -333,7 +335,7 @@
                             <ul class="post-tags-box border-box">
                                 
                                     <li class="tag-item border-box">
-                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/es/">es</a>
+                                        <i class="icon fas fa-hashtag"></i>&nbsp;<a href="/tags/%E7%AE%97%E6%B3%95/">算法</a>
                                     </li>
                                 
                             </ul>
@@ -349,31 +351,15 @@
                 
                     <div class="article-nav">
                         
-                            <div class="article-prev">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2023/08/06/ES/ES%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2/"
-                                   title="ES常用查询"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                      <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                            <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">ES常用查询</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="article-next">
                                 <a class="next"
                                    rel="next"
-                                   href="/2023/08/06/ES/pretty%E7%9A%84%E4%BD%9C%E7%94%A8/"
-                                   title="pretty的作用"
+                                   href="/2024/12/17/%E7%AE%97%E6%B3%95/%E6%8E%92%E5%BA%8F/%E5%BF%AB%E9%80%9F%E6%8E%92%E5%BA%8F/"
+                                   title="快速排序.md"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">pretty的作用</span>
+                                        <span class="post-nav-title-item text-ellipsis">快速排序.md</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                             <span class="right arrow-icon flex-center">
@@ -476,7 +462,7 @@
             <div class="pc-post-toc right-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#elasticsearch%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%AE%B5%EF%BC%88es7%E5%90%8E%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">elasticsearch添加字段（es7后推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elasticsearch-Mapping%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E5%AD%97%E6%AE%B5"><span class="nav-number">2.</span> <span class="nav-text">Elasticsearch Mapping增加一个新字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#note"><span class="nav-number">3.</span> <span class="nav-text">note</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol>
     </div>
 </div>
 
@@ -650,7 +636,7 @@
             <div class="tablet-post-toc">
                 <div class="post-toc-wrap border-box">
     <div class="post-toc border-box">
-        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#elasticsearch%E6%B7%BB%E5%8A%A0%E5%AD%97%E6%AE%B5%EF%BC%88es7%E5%90%8E%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.</span> <span class="nav-text">elasticsearch添加字段（es7后推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Elasticsearch-Mapping%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%B8%AA%E6%96%B0%E5%AD%97%E6%AE%B5"><span class="nav-number">2.</span> <span class="nav-text">Elasticsearch Mapping增加一个新字段</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#note"><span class="nav-number">3.</span> <span class="nav-text">note</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%9D%E8%B7%AF"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0"><span class="nav-number">2.</span> <span class="nav-text">代码实现</span></a></li></ol>
     </div>
 </div>
 

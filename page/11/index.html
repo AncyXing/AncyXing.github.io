@@ -241,15 +241,20 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">
-                            模糊查询
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">
+                            通配符查询
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            在实际搜索中，有时我们可能会打错字，从而导致搜索不到，在 match query 中，可以通过 fuzziness 属性实现模糊查询。
-fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？以LevenShtein 编辑距离为准。编辑距...
+                            wildcard query 即通配符查询。支持单字符和多字符通配符：
+
+？表示一个任意字符。
+*表示零个或者多个字符。
+
+查询所有姓张的作者的书：
+12345678910GET books/_search&#123;  &quot;query&qu...
                         
                     </div>
 
@@ -287,7 +292,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%A8%A1%E7%B3%8A%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -301,15 +306,15 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">
-                            通过id进行查询
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E5%B8%83%E5%B0%94%E8%BF%87%E6%BB%A4%E5%99%A8/">
+                            布尔过滤器
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            根据指定的 id 查询。
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;ids&quot;:&#123;      &quot;values&quot;:  [...
+                            一个 bool 过滤器由三部分组成：
+1234567&#123;   &quot;bool&quot; : &#123;      &quot;must&quot; :     [&#123;&quot;term&quot;: &#123;&quot...
                         
                     </div>
 
@@ -333,7 +338,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                 <i class="icon fas fa-tags"></i>&nbsp;
                 <ul class="article-tag-ul">
                     
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/git/">git</a></li>
                         
                     
                 </ul>
@@ -347,7 +352,7 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E5%B8%83%E5%B0%94%E8%BF%87%E6%BB%A4%E5%99%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -421,20 +426,21 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">
-                            通配符查询
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">
+                            范围查询
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            wildcard query 即通配符查询。支持单字符和多字符通配符：
+                            范围查询可以按照日期范围、数字范围等查询。range query 中的参数主要有四个：
 
-？表示一个任意字符。
-*表示零个或者多个字符。
+gt
+lt
+gte
+lte案例：
 
-查询所有姓张的作者的书：
-12345678910GET books/_search&#123;  &quot;query&qu...
+123456789101112131415161718GET books/_search&#123;  &quot;quer...
                         
                     </div>
 
@@ -472,7 +478,67 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E9%85%8D%E7%AC%A6%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">
+                            通过id进行查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            根据指定的 id 查询。
+12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;ids&quot;:&#123;      &quot;values&quot;:  [...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%80%9A%E8%BF%87id%E8%BF%9B%E8%A1%8C%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -716,67 +782,6 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8D%81%E5%A4%A7%E6%A0%B8%E5%BF%83%E6%A6%82%E5%BF%B5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">
-                            ElasticSearch四种字段类型详解
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            核心类型字符串类型
-string：这是一个已经过期的字符串类型。在 es5 之前，用这个来描述字符串，现在的话，它已经被 text 和 keyword 替代了。
-text：如果一个字段是要被全文检索的，比如说博客内容、新闻内容、产品描述，那么可以使用...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%9B%9B%E7%A7%8D%E5%AD%97%E6%AE%B5%E7%B1%BB%E5%9E%8B%E8%AF%A6%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 

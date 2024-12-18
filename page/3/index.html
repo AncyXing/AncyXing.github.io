@@ -180,6 +180,67 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E5%BB%B6%E6%97%B6%E5%8F%8C%E5%88%A0%E7%AD%96%E7%95%A5%E5%92%8C%E8%AE%A2%E9%98%85mysql%E7%9A%84binlog%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AF%94%E8%BE%83/">
+                            延时双删策略和订阅mysql的binlog之间的比较.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            延时双删策略：原理：在更新数据库之前先删除缓存，然后更新数据库，经过一个短暂的延时后再次删除缓存。
+优点：相对简单，不需要依赖于数据库的binlog，适用于读多写少的场景。
+缺点：可能会因为延时设置不当而导致数据不一致，特别是在高并发场景下，延时期间...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E5%BB%B6%E6%97%B6%E5%8F%8C%E5%88%A0%E7%AD%96%E7%95%A5%E5%92%8C%E8%AE%A2%E9%98%85mysql%E7%9A%84binlog%E4%B9%8B%E9%97%B4%E7%9A%84%E6%AF%94%E8%BE%83/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
                         <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E4%BB%A4%E7%89%8C%E6%A1%B6%E9%99%90%E6%B5%81/">
                             令牌桶限流.md
                         </a>
@@ -239,21 +300,76 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
-                            固定窗口限流.md
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BC%8F%E6%96%97%E6%B3%95%E9%99%90%E6%B5%81/">
+                            漏斗法限流.md
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
                             原理
-比计数限流多了一个时间窗口的概念，每过一个时间窗口后计数器就重置
-请求数小于阈值，放行处理且计数器+1
-请求数超过阈值，拒绝请求
-时间窗口过后，重置计数器
+请求过来，先放入桶中
+桶放满则拒绝请求
+服务定速处理桶内的请求
 
-优缺点优点缺点全局来看，短时间可能出现瞬时的高负载，
-如何实现单机1234567891...
+优缺点优点按固定的速率处理请求，可以平滑的处理请求
+缺点面对突发流量，处理能力和平时一样
+如何实现单机集群（分布式）
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BC%8F%E6%96%97%E6%B3%95%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
+                            滑动窗口限流.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            原理记录每个请求到达的时间点，可以保证在任意时间窗口中都不会超过阈值
+
+记录每次请求的时间
+统计每次请求的时间至每次请求的时间-时间窗口内的请求数
+统计的请求数小于阈值则记录请求的时间并放行，否则拒绝请求
+
+优缺点优点可以保证在任意时间窗口中都不会超...
                         
                     </div>
 
@@ -291,7 +407,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -371,20 +487,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
-                            滑动窗口限流.md
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
+                            固定窗口限流.md
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            原理记录每个请求到达的时间点，可以保证在任意时间窗口中都不会超过阈值
+                            原理
+比计数限流多了一个时间窗口的概念，每过一个时间窗口后计数器就重置
+请求数小于阈值，放行处理且计数器+1
+请求数超过阈值，拒绝请求
+时间窗口过后，重置计数器
 
-记录每次请求的时间
-统计每次请求的时间至每次请求的时间-时间窗口内的请求数
-统计的请求数小于阈值则记录请求的时间并放行，否则拒绝请求
-
-优缺点优点可以保证在任意时间窗口中都不会超...
+优缺点优点缺点全局来看，短时间可能出现瞬时的高负载，
+如何实现单机1234567891...
                         
                     </div>
 
@@ -422,63 +539,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BC%8F%E6%96%97%E6%B3%95%E9%99%90%E6%B5%81/">
-                            漏斗法限流.md
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            原理
-请求过来，先放入桶中
-桶放满则拒绝请求
-服务定速处理桶内的请求
-
-优缺点优点按固定的速率处理请求，可以平滑的处理请求
-缺点面对突发流量，处理能力和平时一样
-如何实现单机集群（分布式）
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BC%8F%E6%96%97%E6%B3%95%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -734,68 +795,6 @@
 
     
         <a class="home-read-more" href="/2024/05/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E5%BB%B6%E6%97%B6%E5%8F%8C%E5%88%A0%E7%AD%96%E7%95%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">
-                            group by在myql与oracle中的异同
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            oracleoracle要求查询的字段必须在group by分组后，若查询字段中有group by中没有的字段则查询会报错。
-mysqlmysql需要根据sql_mode进行判断，若配置了
-1ONLY_FULL_GROUP_BY
-则与oracle相同...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/11/16/mysql/group%20by%E5%9C%A8myql%E4%B8%8Eoracle%E4%B8%AD%E7%9A%84%E5%BC%82%E5%90%8C/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
