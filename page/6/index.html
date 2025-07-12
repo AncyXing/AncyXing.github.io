@@ -180,15 +180,15 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/09/06/mybatis/%E4%BD%BF%E7%94%A8queryWrapper%E8%BF%9B%E8%A1%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">
-                            使用queryWrapper进行条件查询
+                        <a href="/2023/09/06/mybatis/@Param%E6%B3%A8%E8%A7%A3/">
+                            Param注解
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            123queryWrapper.and(query -&gt; query.isNull(&quot;userId&quot;).or().eq(&quot;userId&quot;, getOnlineUser().getUserId()));
-对...
+                            使用场景当方法有多个参数时，这个注解可以用来为每一个参数指定一个名字。否则，多个参数将会以他们的顺序位置被命名，默认为#{param1}、#{param2}等，使用@Param(“person”),参数应该被命名为 #{person}
+单个参数可以不...
                         
                     </div>
 
@@ -226,7 +226,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2023/09/06/mybatis/%E4%BD%BF%E7%94%A8queryWrapper%E8%BF%9B%E8%A1%8C%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/09/06/mybatis/@Param%E6%B3%A8%E8%A7%A3/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
