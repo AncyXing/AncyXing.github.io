@@ -180,6 +180,71 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
+                        <a href="/2024/11/19/mysql/MySQL%E7%9A%84%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/">
+                            MySQL的主从同步
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            查看binlog配置1show variables like &#x27;log_bin&#x27;
+开启binlog配置
+修改my.cnf配置文件
+重启mysql
+
+步骤
+master将数据变更写入二进制日志（binary log），内容记录为bi...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/mysql/">mysql</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/11/19/mysql/MySQL%E7%9A%84%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
                         <a href="/2024/11/19/redis/Redis%E7%9A%84%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E6%9C%89%E5%93%AA%E4%BA%9B/">
                             Redis的部署架构有哪些.md
                         </a>
@@ -227,6 +292,58 @@
 
     
         <a class="home-read-more" href="/2024/11/19/redis/Redis%E7%9A%84%E9%83%A8%E7%BD%B2%E6%9E%B6%E6%9E%84%E6%9C%89%E5%93%AA%E4%BA%9B/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2024/11/19/redis/Redis%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">
+                            Redis的使用场景.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            会话存储分布式系统、集群中存储用户的token、session信息
+消息队列在数据量不大且不想引入消息中间件时，可以使用Redis的list结构作为消息队列
+排行榜寻找top数据，使用Zset，统计访问次数
+实时显示在线用户数量基于内存进行操作，计算...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/11/19/redis/Redis%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -301,72 +418,6 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
-                            固定窗口限流.md
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            原理
-比计数限流多了一个时间窗口的概念，每过一个时间窗口后计数器就重置
-请求数小于阈值，放行处理且计数器+1
-请求数超过阈值，拒绝请求
-时间窗口过后，重置计数器
-
-优缺点优点缺点全局来看，短时间可能出现瞬时的高负载，
-如何实现单机1234567891...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
                         <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E4%BB%A4%E7%89%8C%E6%A1%B6%E9%99%90%E6%B5%81/">
                             令牌桶限流.md
                         </a>
@@ -426,20 +477,21 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
-                            滑动窗口限流.md
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
+                            固定窗口限流.md
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            原理记录每个请求到达的时间点，可以保证在任意时间窗口中都不会超过阈值
+                            原理
+比计数限流多了一个时间窗口的概念，每过一个时间窗口后计数器就重置
+请求数小于阈值，放行处理且计数器+1
+请求数超过阈值，拒绝请求
+时间窗口过后，重置计数器
 
-记录每次请求的时间
-统计每次请求的时间至每次请求的时间-时间窗口内的请求数
-统计的请求数小于阈值则记录请求的时间并放行，否则拒绝请求
-
-优缺点优点可以保证在任意时间窗口中都不会超...
+优缺点优点缺点全局来看，短时间可能出现瞬时的高负载，
+如何实现单机1234567891...
                         
                     </div>
 
@@ -477,7 +529,7 @@
     </div>
 
     
-        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E5%9B%BA%E5%AE%9A%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -613,6 +665,71 @@
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
+                        <a href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">
+                            滑动窗口限流.md
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            原理记录每个请求到达的时间点，可以保证在任意时间窗口中都不会超过阈值
+
+记录每次请求的时间
+统计每次请求的时间至每次请求的时间-时间窗口内的请求数
+统计的请求数小于阈值则记录请求的时间并放行，否则拒绝请求
+
+优缺点优点可以保证在任意时间窗口中都不会超...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2024/11/19/%E5%88%86%E5%B8%83%E5%BC%8F/%E9%99%90%E6%B5%81/%E9%99%90%E6%B5%81%E7%AE%97%E6%B3%95/%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E9%99%90%E6%B5%81/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
                         <a href="/2024/06/18/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E8%AE%A2%E9%98%85MySQL%E7%9A%84binlog/">
                             订阅MySQL的binlog
                         </a>
@@ -659,139 +776,6 @@
 
     
         <a class="home-read-more" href="/2024/06/18/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E8%AE%A2%E9%98%85MySQL%E7%9A%84binlog/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2024/06/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/Cache%20Aside/">
-                            Cache Aside
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            缓存策略读操作
-先读缓存
-缓存没有读取数据库
-更新缓存
-
-写操作
-先更新数据库
-再删除缓存
-
-
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/06/06/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/Cache%20Aside/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2024/05/08/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">
-                            缓存穿透有哪些解决方法
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            什么是缓存穿透
-热点数据缓存失效后，大量并发请求直接访问数据库，导致数据库压力剧增
-查询本就不存在的数据，导致每次都要查询数据库
-
-影响
-数据库压力增大：由于每次请求都要访问数据库，导致数据库的压力增大。
-系统性能降低：每次请求都要访问数据库，导致系...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/%E5%88%86%E5%B8%83%E5%BC%8F/">分布式</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2024/05/08/%E5%88%86%E5%B8%83%E5%BC%8F/%E7%BC%93%E5%AD%98%E4%B8%80%E8%87%B4%E6%80%A7/%E7%BC%93%E5%AD%98%E7%A9%BF%E9%80%8F%E6%9C%89%E5%93%AA%E4%BA%9B%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 

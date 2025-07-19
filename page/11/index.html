@@ -240,65 +240,6 @@ fuzzy query 返回与搜索关键字相似的文档。怎么样就算相似？�
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/">
-                            批量更新
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            sample1234567891011121314GET oss-rcs-detail-*/_update_by_query&#123;  &quot;query&quot;: &#123;    &quot;range&quot;: &#123; ...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E6%89%B9%E9%87%8F%E6%9B%B4%E6%96%B0/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
                         <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">
                             范围查询
                         </a>
@@ -352,6 +293,67 @@ lte案例：
 
     
         <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%8C%83%E5%9B%B4%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">
+                            词项查询
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            词项查询即 term 查询，就是根据词去查询，查询指定字段中包含给定单词的文档，term 查询不被解析，只有搜索的词和文档中的词精确匹配，才会返回文档。应用场景如：人名、地名等等。
+查询 name 字段中包含 十一五 的文档。
+12345678GET...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -425,16 +427,15 @@ lte案例：
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">
-                            词项查询
+                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
+                            非空查询
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            词项查询即 term 查询，就是根据词去查询，查询指定字段中包含给定单词的文档，term 查询不被解析，只有搜索的词和文档中的词精确匹配，才会返回文档。应用场景如：人名、地名等等。
-查询 name 字段中包含 十一五 的文档。
-12345678GET...
+                            exists query 会返回指定字段中至少有一个非空值的文档：
+12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
                         
                     </div>
 
@@ -472,7 +473,7 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E8%AF%8D%E9%A1%B9%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -551,15 +552,15 @@ lte案例：
                 <div class="home-article-item-bottom border-box">
                     
                     <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">
-                            非空查询
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">
+                            指标聚合
                         </a>
                     </h3>
 
                     <div class="home-article-content keep-markdown-body">
                         
-                            exists query 会返回指定字段中至少有一个非空值的文档：
-12345678GET books/_search&#123;  &quot;query&quot;: &#123;    &quot;exists&quot;: &#123;   ...
+                            Max Aggregation统计最大值。例如查询价格最高的书：
+12345678910GET books/_search&#123;  &quot;aggs&quot;: &#123;    &quot;max_price&quot;: &#123...
                         
                     </div>
 
@@ -597,7 +598,128 @@ lte案例：
     </div>
 
     
-        <a class="home-read-more" href="/2023/08/06/ES/ES%E6%9F%A5%E8%AF%A2%E8%AF%AD%E5%8F%A5/%E9%9D%9E%E7%A9%BA%E6%9F%A5%E8%AF%A2/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%8C%87%E6%A0%87%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">
+                            桶聚合（bucket）
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            Terms AggregationTerms Aggregation 用于分组聚合，例如，统计各个出版社出版的图书总数量:
+1234567891011GET books/_search&#123;  &quot;aggs&quot;: &#123; ...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E6%A1%B6%E8%81%9A%E5%90%88%EF%BC%88bucket%EF%BC%89/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
+    
+</div>
+
+                </div>
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <div class="home-article-item-bottom border-box">
+                    
+                    <h3 class="home-article-title border-box">
+                        <a href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E7%AE%A1%E9%81%93%E8%81%9A%E5%90%88/">
+                            管道聚合
+                        </a>
+                    </h3>
+
+                    <div class="home-article-content keep-markdown-body">
+                        
+                            管道聚合相当于在之前聚合的基础上，再次聚合。
+Avg Bucket Aggregation 计算聚合平均值。例如，统计每个出版社所出版图书的平均值，然后再统计所有出版社的平均值：
+12345678910111213141516171819202122...
+                        
+                    </div>
+
+                    
+
+<div class="article-meta-info-container border-box home">
+    <div class="article-meta-info border-box">
+        
+            <span class="meta-info-item border-box">
+                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
+            </span>
+        
+
+
+        
+
+        
+
+        
+            <span class="article-tag meta-info-item border-box">
+                <i class="icon fas fa-tags"></i>&nbsp;
+                <ul class="article-tag-ul">
+                    
+                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+        <a class="home-read-more" href="/2023/08/06/ES/%E8%81%9A%E5%90%88%E5%88%86%E6%9E%90/%E7%AE%A1%E9%81%93%E8%81%9A%E5%90%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
@@ -660,127 +782,6 @@ lte案例：
 
     
         <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E4%B8%AD%E6%96%87%E5%88%86%E8%AF%8D%E5%99%A8/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">
-                            ElasticSearch中的倒排索引到底是什么
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            倒排索引是 es 中非常重要的索引结构，是从文档词项到文档 ID 的一个映射过程。
-“正排索引”我们在关系型数据库中见到的索引，就是“正排索引”。关系型数据库中的索引如下，假设我有一个博客表：我们可以针对这个表建立索引（正排索引）：
-当我们通过 id...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E4%B8%AD%E7%9A%84%E5%80%92%E6%8E%92%E7%B4%A2%E5%BC%95%E5%88%B0%E5%BA%95%E6%98%AF%E4%BB%80%E4%B9%88/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-article-item">
-
-                
-
-                <div class="home-article-item-bottom border-box">
-                    
-                    <h3 class="home-article-title border-box">
-                        <a href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">
-                            ElasticSearch动态映射与静态映射
-                        </a>
-                    </h3>
-
-                    <div class="home-article-content keep-markdown-body">
-                        
-                            映射就是 Mapping，它用来定义一个文档以及文档所包含的字段该如何被存储和索引。所以，它其实有点类似于关系型数据库中表的定义。
-映射分类动态映射顾名思义，就是自动创建出来的映射。es 根据存入的文档，自动分析出来文档中字段的类型以及存储方式，这种...
-                        
-                    </div>
-
-                    
-
-<div class="article-meta-info-container border-box home">
-    <div class="article-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fas fa-history"></i>&nbsp;<span class="home-article-history" data-updated="Mon Dec 16 2024 16:01:01 GMT+0800">2024-12-16 16:01:01</span>
-            </span>
-        
-
-
-        
-
-        
-
-        
-            <span class="article-tag meta-info-item border-box">
-                <i class="icon fas fa-tags"></i>&nbsp;
-                <ul class="article-tag-ul">
-                    
-                            <li class="tag-item"><span class="tag-separator"><i class="icon fas fa-hashtag"></i></span><a href="/tags/es/">es</a></li>
-                        
-                    
-                </ul>
-            </span>
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2023/08/06/ES/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/ElasticSearch%E5%8A%A8%E6%80%81%E6%98%A0%E5%B0%84%E4%B8%8E%E9%9D%99%E6%80%81%E6%98%A0%E5%B0%84/">阅读全文&nbsp;<i class="icon fas fa-angles-right"></i></a>
     
 </div>
 
